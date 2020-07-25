@@ -1,0 +1,11 @@
+@model List<Produto>
+@{ViewData["Title"] = "Produtos";}
+<link rel="stylesheet" href="~/css/Produto/Produtos2.css">
+<h2>Produtos</h2>
+@foreach (Produto item in Model)
+{
+    <div id="figure2">
+        <img src="~/imagens/@item.imagem" alt="@item.nome" id="img">
+        <p id="fig" >@item.nome <b>R$@item.preco</b></p>
+    </div>
+}

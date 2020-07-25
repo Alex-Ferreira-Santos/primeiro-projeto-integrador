@@ -1,0 +1,31 @@
+@model List<Usuario>
+@{ViewData["Title"] = "Listagem de Usuários";}
+<link rel="stylesheet" href="/css/Usuario/Listagem2.css">
+<h2>Dados dos Usuários</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Email</th>
+            <th>Senha</th>
+            <th>Idade</th>
+            <th>Tipo</th>
+            <th>Nome</th>
+            <th>Opções</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Usuario a in Model)
+        {
+            <tr>
+                <td>@a.id</td>
+                <td>@a.email</td>
+                <td>@a.senha</td>
+                <td>@a.idade</td>
+                <td>@a.tipo</td>
+                <td>@a.nome</td>
+                <td><a asp-action="Modificar" asp-controller="Usuario" id="editar">Editar</a>|<a asp-action="Excluir" asp-controller="Usuario" id="excluir">Excluir</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

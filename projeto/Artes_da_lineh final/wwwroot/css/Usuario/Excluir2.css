@@ -1,0 +1,17 @@
+fieldset{
+    width: 400px;
+    background-color: white;
+    margin: auto;
+    margin-bottom: 10px;
+}
+input{
+    width: 180px;
+}
+input#cancelar{
+    position: absolute;
+    left: 610px;
+}
+input#deletar{
+    position: relative;
+    right: 100px;
+}

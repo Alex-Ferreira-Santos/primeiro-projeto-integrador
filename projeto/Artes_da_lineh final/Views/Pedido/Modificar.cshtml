@@ -1,0 +1,64 @@
+@model Pedido
+@{ViewData["Title"]="Edição de Pedidos";}
+<link rel="stylesheet" href="~/css/Pedido/Edicao2.css">
+<h2>Edição de Pedidos</h2>
+<form asp-action="Modificar" method="post">
+    <fieldset>
+        <p>@ViewBag.mensagem</p>
+        <p>
+            <label asp-for="id">Digite o id do pedido que deseja alterar:</label>
+            <input asp-for="id" placeholder="Digite o id aqui" required>
+        </p>
+        <p>
+            <label asp-for="nome">Digite o novo nome aqui</label>
+            <input asp-for="nome" placeholder="Digite o novo nome aqui" required>
+        </p>
+        <p>
+            <label asp-for="estado">Selecione o novo Estado: </label>
+            <select asp-for="estado" id="estado">
+                <option value="São Paulo">São Paulo</option>
+                <option value="Rio de Janeiro">Rio de Janeiro</option>
+                <option value="Minas Gerais">Minas Gerais</option>
+                <option value="Espirito Santo">Espirito Santo</option>
+                <option value="Parana">Paraná</option>
+                <option value="Santa Catarina">Santa Catarina</option>
+                <option value="Rio Grande do Sul">Rio Grande do Sul</option>
+                <option value="Mato Grosso">Mato Grosso</option>
+                <option value="Mato Grosso do Sul">Mato Grosso do Sul</option>
+                <option value="Goias">Goiás</option>
+                <option value="Distrito Federal">Distrito Federal</option>
+                <option value="Alagoas">Alagoas</option>
+                <option value="Bahia">Bahia</option>
+                <option value="Ceara">Ceará</option>
+                <option value="Maranhao">Maranhão</option>
+                <option value="Piaui">Piauí</option>
+                <option value="Pernambuco">Pernambuco</option>
+                <option value="Paraiba">Paraíba</option>
+                <option value="Rio Grande do Norte">Rio Grande do Norte</option>
+                <option value="Sergipe">Sergipe</option>
+                <option value="Amazonas">Amazonas</option>
+                <option value="Acre">Acre</option>
+                <option value="Amapa">Amapá</option>
+                <option value="Para">Pará</option>
+                <option value="Rondonia">Rondônia</option>
+                <option value="Roraima">Roraima</option>
+                <option value="Tocantins">Tocantins</option>
+            </select>
+        </p>
+        <p>
+            <label asp-for="endereco">Digite o novo endereço: </label>
+            <input asp-for="endereco" type="text" placeholder="Digite seu endereço aqui" required>
+        </p>
+        <p>
+            <label asp-for="telefone">Digite o novo Telefone: </label>
+            <input asp-for="telefone" type="tel" placeholder="Digite seu telefone aqui" required>
+        </p>
+        <p>
+            <label asp-for="pedido">Digite o novo Pedido: </label>
+            <input asp-for="pedido" type="text" placeholder="Digite seu pedido" required>
+        </p>
+        <p><a asp-action="Index" asp-controller="Home"><input type="button" value="Cancelar" id="cancelar"></a></p>
+        <p><input type="submit" value="Confirmar" id="confirmar"></p>
+        @if(ViewBag.mensagem!=null){<p><a asp-action="Visualizar">Voltar a listagem</a></p>}
+    </fieldset>
+</form>

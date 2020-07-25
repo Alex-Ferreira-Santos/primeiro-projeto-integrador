@@ -1,0 +1,40 @@
+main{
+    width: 100%;
+    left: 0px;
+    text-align: left;
+    height: 550px;
+}
+h2{
+    text-align: center;
+}
+fieldset{
+    background-color: white;
+    position: relative;
+    width: 500px;
+    left: 400px;
+    margin-bottom: 10px;
+    height: 510px;
+}
+input{
+    position: absolute;
+    width: 300px;
+    left: 120px;
+}
+label{
+    position: relative;
+    left: 30px;
+}
+fieldset a{
+    position: relative;
+    top: 30px;
+    left: 70px;
+    text-align: center;
+}
+fieldset img{
+    position: relative;
+    top: 0px;
+    left: 130px;
+}
+img#user{
+    visibility: hidden;
+}

@@ -1,0 +1,56 @@
+footer{
+    position: relative;
+    background-color: rgb(214, 255, 239);
+    height: 30px;
+}
+footer h2{
+    position: absolute;
+    bottom: -20px;
+    left: 22px;
+}
+footer a{
+    position: relative;
+    left: 240px;
+    top: 6px;
+}
+main{
+    width: 100%;
+    left: 0px;
+    text-align: left;
+}
+h2{
+    text-align: center;
+}
+h3{
+    text-align: center;
+}
+fieldset{
+    background-color: white;
+    position: relative;
+    width: 500px;
+    left: 415px;
+    margin-bottom: 10px;
+}
+input{
+    position: absolute;
+    width: 300px;
+    left: 120px;
+}
+select{
+    position: relative;
+    width: 300px;
+    left: 50px;
+}
+label{
+    position: relative;
+    left: 30px;
+}
+p#Viewbag{
+    text-align: center;
+}
+p#visualizar{
+    position: relative;
+    top: 30px;
+    left: 175px;
+    padding-bottom: 10px;
+}

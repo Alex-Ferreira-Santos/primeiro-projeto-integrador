@@ -1,0 +1,18 @@
+@model Produto
+@{ViewData["Title"]="Inserção de Produtos";}
+<link rel="stylesheet" href="~/css/Produto/Inserir2.css">
+<h2>Inserção de Produtos</h2>
+<form asp-action="Inserir" method="post">
+    <fieldset>
+        <p>@ViewBag.mensagem</p>
+        <p><label asp-for="imagem">Selecione a uma imagem: </label></p>
+        <p><input asp-for="imagem" type="file" required id="file"></p>
+        <p><label asp-for="nome">Digite o nome: </label></p>
+        <p><input asp-for="nome" placeholder="Digite o nome do produto aqui" required></p>
+        <p><label asp-for="preco">Digite o preço aqui: </label></p>
+        <p><input asp-for="preco" placeholder="Digite o preço do produto aqui" required></p>
+        <p><a asp-action="Index" asp-controller="Home"><input type="button" value="Cancelar" id="cancelar"></a></p>
+        <p><input type="submit" value="Inserir" id="inserir"></p>
+        <p>@if(ViewBag.mensagem!=null){<a asp-action="Produtos" asp-controller="Produtos">Voltar a pagina de produtos</a>}</p>
+    </fieldset>
+</form>

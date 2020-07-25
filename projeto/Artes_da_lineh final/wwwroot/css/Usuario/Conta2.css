@@ -1,0 +1,57 @@
+main{
+    width: 100%;
+    left: 0px;
+    text-align: left;
+}
+h2{
+    text-align: center;
+}
+fieldset{
+    background-color: white;
+    position: relative;
+    width: 580px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+input{
+    position: relative;
+    width: 300px;
+    left: 40px;
+}
+label{
+    position: relative;
+    left: 40px;
+}
+fieldset a{
+    position: relative;
+    top: 30px;
+    left: 70px;
+    text-align: center;
+}
+fieldset img{
+    position: relative;
+    top: 0px;
+    left: 145px;
+}
+input#concluir{
+    position: relative;
+    width: 250px;
+    left: 20px;
+}
+input#cancelar{
+    position: absolute;
+    width: 250px;
+    bottom: 9px;
+    left: 240px;
+}
+img#user{
+    visibility: hidden;
+}
+p#viewbag{
+    text-align: center;
+}
+p#viewbag1{
+    position: relative;
+    left: 140px;
+    bottom: 20px;
+}

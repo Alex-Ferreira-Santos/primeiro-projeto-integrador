@@ -1,0 +1,36 @@
+@model List<Pedido>
+@{ViewData["Title"]="Visualizar pedidos";}
+<link rel="stylesheet" href="~/css/Pedido/Visualizar2.css">
+<h2>Visualização de pedidos</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Estado</th>
+            <th>Endereço</th>
+            <th>Telefone</th>
+            <th>Data do Pedido</th>
+            <th>Pedido</th>
+            <th>Usuário</th>
+            <th>Opções</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Pedido a in Model)
+        {
+            <tr>
+                <td>@a.id</td>
+                <td>@a.nome</td>
+                <td>@a.estado</td>
+                <td>@a.endereco</td>
+                <td>@a.telefone</td>
+                <td>@a.dataPedido</td>
+                <td>@a.pedido</td>
+                <td>@a.usuario</td>
+                <td><a asp-action="Modificar" asp-controller="Pedido" id="edicao">Edição</a>|<a asp-action="Excluir" asp-controller="Pedido" id="excluir">Excluir</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+<p><a asp-action="Produtos" asp-controller="Produtos">Ver mais produtos</a></p>

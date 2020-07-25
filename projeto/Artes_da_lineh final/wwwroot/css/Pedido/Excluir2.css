@@ -1,0 +1,17 @@
+fieldset{
+    background-color: white;
+    margin: auto;
+    width: 400px;
+    margin-bottom: 20px;
+}
+input{
+    width: 150px;
+}
+input#cancelar{
+    position: absolute;
+    left: 610px;
+}
+input#excluir{
+    position: relative;
+    right: 90px;
+}

@@ -1,0 +1,23 @@
+fieldset{
+    background-color: white;
+    width: 500px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+input{
+    width: 200px;
+}
+select{
+    width: 200px;
+}
+input#cancelar{
+    position: absolute;
+    left: 620px;
+}
+input#confirmar{
+    position: relative;
+    right: 120px;
+}
+footer{
+    position: relative;
+}

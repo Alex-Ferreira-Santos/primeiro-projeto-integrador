@@ -1,0 +1,19 @@
+fieldset{
+    background-color: white;
+    width: 400px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+input{
+    width: 200px;
+}
+input#cancelar{
+    position: absolute;
+    width: 180px;
+    left: 615px;
+}
+input#modificar{
+    position: relative;
+    width: 180px;
+    right: 100px;
+}

@@ -1,0 +1,22 @@
+@model Usuario
+@{ViewData["Title"] = "Home Page";}
+<link rel="stylesheet" href="/css/Usuario/Login2.css">
+<form method="POST">
+<fieldset>
+    <p>@ViewBag.mensagem</p>
+    <h2>Faça login para fazer uma compra</h2>
+    <img src="/imagens/user.jpg" alt="foto de usuario">
+    <p>
+        <label asp-for="email">E-mail: </label>
+        <input asp-for="email" type="email" id="email" placeholder="Digite seu E-mail aqui" required>
+    </p>
+    <p>
+        <label asp-for="senha">Senha: </label>
+        <input asp-for="senha" type="password" id="senha" placeholder="Digite sua senha aqui" required>
+    </p>
+    <p>
+        <input type="submit" value="Confirmar" id="confirmar">
+    </p>
+    <p><a asp-action="Conta" asp-controller="Usuario">Não tem uma conta? crie-a agora clicando aqui!</a></p>
+</fieldset>
+</form>

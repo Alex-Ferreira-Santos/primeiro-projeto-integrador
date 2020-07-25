@@ -1,0 +1,26 @@
+table{
+    position: relative;
+    text-align: center;
+    border-style: solid;
+    border-color: black;
+    border-width: 1.5px;
+    padding: 1px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+th{
+    border-width: 1px;
+    border-style: solid;
+    padding: 5px;
+}
+td{
+    border-width: 1px;
+    border-style: solid;
+    padding: 5px;
+}
+thead{
+    background-color: lightblue;
+}
+tbody{
+    background-color: white;
+}

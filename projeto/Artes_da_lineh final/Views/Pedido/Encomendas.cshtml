@@ -1,0 +1,62 @@
+@model Pedido
+@{ViewData["Title"] = "Home Page";}
+<link rel="stylesheet" href="/css/Pedido/Encomendas2.css">
+<h2>Encomendas</h2>
+<h3>Faça seu pedido!!!</h3>
+<form method="POST">
+    <fieldset>
+        <p id="Viewbag">@ViewBag.mensagem</p>
+        <p>
+            <label asp-for="nome">Nome: </label>
+            <input asp-for="nome" type="text" id="nome" placeholder="Nome Completo" required>
+        </p>
+        <p>
+            <label asp-for="estado">Estado: </label>
+            <select asp-for="estado" id="estado">
+                <option value="São Paulo">São Paulo</option>
+                <option value="Rio de Janeiro">Rio de Janeiro</option>
+                <option value="Minas Gerais">Minas Gerais</option>
+                <option value="Espirito Santo">Espirito Santo</option>
+                <option value="Parana">Paraná</option>
+                <option value="Santa Catarina">Santa Catarina</option>
+                <option value="Rio Grande do Sul">Rio Grande do Sul</option>
+                <option value="Mato Grosso">Mato Grosso</option>
+                <option value="Mato Grosso do Sul">Mato Grosso do Sul</option>
+                <option value="Goias">Goiás</option>
+                <option value="Distrito Federal">Distrito Federal</option>
+                <option value="Alagoas">Alagoas</option>
+                <option value="Bahia">Bahia</option>
+                <option value="Ceara">Ceará</option>
+                <option value="Maranhao">Maranhão</option>
+                <option value="Piaui">Piauí</option>
+                <option value="Pernambuco">Pernambuco</option>
+                <option value="Paraiba">Paraíba</option>
+                <option value="Rio Grande do Norte">Rio Grande do Norte</option>
+                <option value="Sergipe">Sergipe</option>
+                <option value="Amazonas">Amazonas</option>
+                <option value="Acre">Acre</option>
+                <option value="Amapa">Amapá</option>
+                <option value="Para">Pará</option>
+                <option value="Rondonia">Rondônia</option>
+                <option value="Roraima">Roraima</option>
+                <option value="Tocantins">Tocantins</option>
+            </select>
+        </p>
+        <p>
+            <label asp-for="endereco">Endereço: </label>
+            <input asp-for="endereco" type="text" id="endereco" placeholder="Coloque seu endereço aqui" required>
+        </p>
+        <p>
+            <label asp-for="telefone">Telefone: </label>
+            <input asp-for="telefone" type="tel" id="telefone" placeholder="Coloque seu telefone aqui" required>
+        </p>
+        <p>
+            <label asp-for="pedido">Pedido: </label>
+            <input asp-for="pedido" type="text" id="pedido" placeholder="Digite seu pedido" required>
+        </p>
+        <p>
+            <input type="submit" value="Confirmar">
+        </p>
+        <p id="visualizar">@if(ViewBag.mensagem!=null){<a asp-action="Visualizar" id="visualizar">Ver a lista de produtos</a>}</p>
+    </fieldset>
+</form>
