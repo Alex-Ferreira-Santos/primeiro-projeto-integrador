@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "eTKnVGyZ5yLklB0hsNnesB/5iPj4hYFNbBVMXHTSmhnxS9blVIidlYaTgwRPjxEP2rm7+nMigcuYV2WZzGG8Xg==",
+  "dgSpecHash": "SgIZpqyW9ZTc3IMzZwHEfGi2+4xA0M5Z/7P/iMrwANoTNNxQ/wDB9SVMGVW/vY9CjAVGH1PzCkMEZ2P5E/UJQw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Casa\\OneDrive\\Documents\\curso senac\\projeto\\Artes_da_lineh final\\Artes_da_lineh final.csproj",
+  "projectFilePath": "C:\\Users\\Casa\\OneDrive\\Documents\\curso senac\\projeto 2\\Artes_da_lineh final\\Artes_da_lineh final.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Casa\\.nuget\\packages\\mysqlconnector\\0.67.0\\mysqlconnector.0.67.0.nupkg.sha512"
   ],
