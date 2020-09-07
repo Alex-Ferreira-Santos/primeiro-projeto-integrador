@@ -48,9 +48,8 @@ namespace Artes_da_lineh_final.Controllers
         {
             UsuarioRepository ur=new UsuarioRepository();
             u.tipo=0;
-            ur.insert(u);
-            ViewBag.mensagem=$"Usuário {u.nome} criado com sucesso";
-            return View();
+            //ur.insert(u);
+            return RedirectToAction("Login","Usuario");
         }
         public IActionResult Listagem()
         {
@@ -98,7 +97,7 @@ namespace Artes_da_lineh_final.Controllers
                 return RedirectToAction("Login","Usuario");
             }
             UsuarioRepository ur =new UsuarioRepository();
-            ur.update(u);
+            ur.updateU(u);
             ViewBag.mensagem=$"Usuario {u.nome} modificado com sucesso";
             return View();
         }

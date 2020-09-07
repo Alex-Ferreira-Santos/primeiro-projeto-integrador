@@ -3,9 +3,10 @@
     ViewData["Title"] = "Login";
     Layout = "_Login";
 }
-<link rel="stylesheet" href="/css/Usuario/Login.css">
+<link rel="stylesheet" href="/css/Usuario/Login3.css">
 <form method="POST" class="text-center mt-3 pb-3">
 <fieldset>
+    <a asp-controller="Home" asp-action="Index" id="seta"><img src="~/imagens/left-arrow-key-1.png" id="voltar" alt="voltar"></a>
     <p>@ViewBag.mensagem</p>
     <h2>Faça login para fazer uma compra</h2>
     <img src="/imagens/user1.png" class="rounded-circle" id="usuario" alt="foto de usuario">

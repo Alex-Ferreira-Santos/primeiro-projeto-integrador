@@ -1,15 +1,28 @@
 @model Mensagem
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Fale Conosco";
 }
-<link rel="stylesheet" href="~/css/Home/FaleConosco.css">
-<h2>Fale Conosco</h2>
+<link rel="stylesheet" href="~/css/Home/FaleConosco2.css">
+<h2 class="text-center">Fale Conosco</h2>
 <form method="POST">
 <fieldset>
-    <p><label asp-for="nome">Nome: </label><input type="text" name="nome" id="nome" placeholder="Digite seu nome aqui" required></p>
-    <p><label asp-for="email">E-mail: </label><input type="email" name="email" id="email" placeholder="Digite seu e-mail aqui" required></p>
-    <p><label asp-for="assunto">Assunto: </label><input type="text" name="assunto" id="assunto" placeholder="Digite o assunto aqui" required></p>
-    <p><label asp-for="mensagem" id="msg">Mensagem: </label><textarea name="mensagem" id="mensagem" cols="30" rows="10" placeholder="Digite seu mensagem aqui" required></textarea></p>
+    <p><label asp-for="nome">Nome* </label></p>
+    <p><input type="text" name="nome" id="nome" placeholder="Digite seu nome aqui" required></p>
+
+    <p><label asp-for="email">E-mail* </label></p>
+    <p><input type="email" name="email" id="email" placeholder="Digite seu e-mail aqui" required></p>
+
+    <p><label asp-for="assunto">Assunto* </label></p>
+    <p><input type="text" name="assunto" id="assunto" placeholder="Digite o assunto aqui" required></p>
+
+    <p><label asp-for="mensagem" id="msg">Mensagem* </label></p>
+    <p><textarea name="mensagem" id="mensagem" cols="30" rows="10" placeholder="Digite seu mensagem aqui" required></textarea></p>
+
     <p><input type="submit" value="Enviar" id="submit"></p>
 </fieldset>
 </form>
+<script>
+    document.querySelector("#submit").onclick = function(){
+        alert("Mensagem enviada com sucesso")
+    }
+</script>

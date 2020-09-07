@@ -1,0 +1,72 @@
+#encomendas{
+    display: none;
+}
+main{
+    margin-bottom: 1em;
+}
+fieldset{
+    margin: 1em 0;
+    padding: 1em 0;
+    background-color: #FFC8C7;
+}
+p{
+    margin: 0;
+}
+input{
+    text-align-last: center;
+    width: 60vw;
+    outline: none;
+    border-radius: 15px;
+    margin-bottom: 0.5em;
+}
+select{
+    text-align-last: center;
+    width: 60vw;
+    outline: none;
+    border-radius: 15px;
+    margin-bottom: 0.5em;
+}
+.submit{
+    margin-top: 0.5em;
+    background-color: rgb(0, 180, 0);
+    transition: 0.2s;
+}
+.submit:hover{
+    background-color: green;
+    color: white;
+}
+#lista{
+    background-color: lightblue;
+    border-radius: 15px;
+    width: 60vw;
+}
+#lista:hover{
+    background-color: rgb(140, 174, 185);
+}
+#linkLista{
+    color: black;
+    text-decoration: none;
+}
+#linkLista:hover{
+    color: white;
+}
+
+@media(min-width:990px){
+    fieldset{
+        width: 50vw;
+        margin: auto;
+    }
+    input,select,#lista{
+        width: 40vw;
+    }
+}
+/*label{
+    position: relative;
+    left: 30px;
+}
+#visualizar{
+    position: relative;
+    top: 30px;
+    left: 175px;
+    padding-bottom: 10px;
+}

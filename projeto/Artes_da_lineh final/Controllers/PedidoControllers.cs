@@ -26,7 +26,7 @@ namespace Artes_da_lineh_final.Controllers
             PedidoRepository pr = new PedidoRepository();
             p.dataPedido = DateTime.Now;
             p.usuario = HttpContext.Session.GetString("nomeUsuarioUsuario");
-            //pr.insert(p);
+            pr.insert(p);
             ViewBag.mensagem=$"Pedido {p.pedido} realizado com sucesso";
             return View();
         }

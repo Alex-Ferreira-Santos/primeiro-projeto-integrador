@@ -28,7 +28,6 @@ namespace Artes_da_lineh_final.Controllers
         [HttpPost]
         public IActionResult FaleConosco(Mensagem m)
         {
-            ViewBag.mensagem="Mensagem enviada com sucesso";
             return View();
         }
         public IActionResult Menu()
