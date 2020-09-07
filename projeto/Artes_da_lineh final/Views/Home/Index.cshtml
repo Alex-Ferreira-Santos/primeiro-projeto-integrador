@@ -1,14 +1,16 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-<link rel="stylesheet" href="~/css/Home/index.css">
+<link rel="stylesheet" href="~/css/Home/index2.css">
 <h2>Bem Vindo!</h2>
 <p>Seja bem vindo(a) ao Artesdelineh, aqui você vai encontrar amigurumis e ilustrações.</p>
-<h2>confira nossos produtos!</h2>
-<figure id="figure1">
-    <img src="/imagens/unicornio2.jpg" alt="unicornio" id="img1">
-    <figcaption id="fig1">Amigurumi unicornio <b>R$99,99</b></figcaption>
-    <img src="/imagens/coelho1.jpg" alt="coelho" id="img2">
-    <figcaption id="fig2">Amigurumi coelho <b>R$99,99</b></figcaption>
-</figure>
-<h3><a asp-action="Produtos" asp-controller="Produtos">Clique aqui para ver mais produtos!</a></h3>
+<h2>confira nossos novos produtos!</h2>
+<div>
+    @await Html.PartialAsync("_Produtos")
+</div>
+<a asp-action="Produtos" asp-controller="Produtos"><button class="button border-0 text-light">Clique aqui para ver mais produtos!</button></a>
+<h2>Novos desenhos!</h2>
+<div>
+    @await Html.PartialAsync("_Desenhos")
+</div>
+<a asp-action="Desenhos" asp-controller="Desenho"><button class="button border-0 text-light">Clique aqui para ver mais desenhos!</button></a>

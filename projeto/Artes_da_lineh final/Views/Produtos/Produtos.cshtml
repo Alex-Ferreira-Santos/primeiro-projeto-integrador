@@ -1,11 +1,13 @@
-@model List<Produto>
+@model ViewModel
 @{ViewData["Title"] = "Produtos";}
-<link rel="stylesheet" href="~/css/Produto/Produtos2.css">
-<h2>Produtos</h2>
-@foreach (Produto item in Model)
-{
-    <div id="figure2">
-        <img src="~/imagens/@item.imagem" alt="@item.nome" id="img">
-        <p id="fig" >@item.nome <b>R$@item.preco</b></p>
-    </div>
-}
+<link rel="stylesheet" href="~/css/Produto/Produtos.css">
+<style>
+    #produtos{
+        display: none;
+    }
+    main{
+        margin-bottom: 1em;
+    }
+</style>
+<h2 class="position-relative">Produtos</h2>
+@await Html.PartialAsync("_Produtos")

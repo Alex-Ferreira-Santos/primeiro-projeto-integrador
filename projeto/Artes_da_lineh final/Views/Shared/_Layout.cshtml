@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artes da Lineh</title>
+    <title>Artes de Lineh - @ViewData["Title"]</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
@@ -15,12 +15,12 @@
         <nav>
             <a asp-action="Index" asp-controller="Home" id="home">Home</a>
             <a asp-action="Produtos" asp-controller="Produtos" id="produtos">Produtos</a>
-            <a asp-action="Desenhos" asp-controller="Desenho" id="desenhos">Desenhos</a>
+            <a asp-action="Desenhos" asp-controller="Desenho" id="Desenhos">Desenhos</a>
             <a asp-action="Encomendas" asp-controller="pedido" id="encomendas">Encomendas</a>
             <a asp-action="FaleConosco" asp-controller="Home" id="faleConosco">Fale conosco</a>
             @if(Context.Session.GetInt32("idUsuarioUsuario")==1){<a asp-action="Menu" asp-controller="Home" id="menu" class="mr-0">Menu</a>}
         </nav>
-        <a asp-action="Login" asp-controller="Usuario"><img src="/imagens/user1.jpg" alt="usuario" id="user"></a>
+        <a asp-action="Login" asp-controller="Usuario"><img src="~/imagens/user1.png" alt="usuario" id="user"></a>
         @if(Context.Session.GetInt32("idUsuario")!=null){
         <span>Olá <b>@Context.Session.GetString("nomeUsuario")</b></span><a asp-controller="Usuario" asp-action="Logout"><h4 id="logout">Logout</h4></a>}
     </header>
@@ -32,14 +32,13 @@
     <footer class="position-relative w-100">
         <h3 class="ml-3">Artes da Lineh &copy;</h3>
         <div id="social-media">
-            <a href="https://www.facebook.com/artesdelineh/?hc_ref=ARSFqW15de8Fn1Jv2HpH1IASR_RcaJ8atTwVahsKLwSRu-Y5_Ijw4v1wlIwlH5XN_14&fref=nf" target="_blank">Facebook</a>
-            <a href="https://instagram.com/artesdelineh?igshid=fqlr31zoyixy" target="_blank">Instagram</a>
-            <a href="https://br.pinterest.com/alineilustracoes/" target="_blank">Pinterest</a>
+            <a href="https://www.facebook.com/artesdelineh/?hc_ref=ARSFqW15de8Fn1Jv2HpH1IASR_RcaJ8atTwVahsKLwSRu-Y5_Ijw4v1wlIwlH5XN_14&fref=nf" target="_blank"><label id="facebook"></label></a>
+            <a href="https://instagram.com/artesdelineh?igshid=fqlr31zoyixy" target="_blank"><label id="instagram"></label></a>
+            <a href="https://br.pinterest.com/alineilustracoes/" target="_blank"><label id="pinterest"></label></a>
         </div>
-        <h3>Copyrights</h3>
+        <h3 id="copyright">Copyrights</h3>
         <div id="copyrights">
-            Ícones feitos por <a href="https://www.flaticon.com/br/autores/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/br/" title="Flaticon"> www.flaticon.com</a>
-            Ícones feitos por <a href="https://www.flaticon.com/br/autores/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/br/" title="Flaticon"> www.flaticon.com</a>
+            <p>Ícones feitos por <a href="https://www.flaticon.com/br/autores/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/br/" title="Flaticon"> www.flaticon.com</a></p>
         </div>
         
     </footer>

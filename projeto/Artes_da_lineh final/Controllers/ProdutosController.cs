@@ -14,9 +14,10 @@ namespace Artes_da_lineh_final.Controllers
     {
         public IActionResult Produtos()
         {
-            ProdutoRepository pr =new ProdutoRepository();
-            List<Produto> pro=pr.select();
-            return View(pro);
+            ViewModel viewModel = new ViewModel();
+            viewModel.produtoRepository = new ProdutoRepository();
+            viewModel.listaProduto = viewModel.produtoRepository.select();
+            return View(viewModel);
         }
         public IActionResult Inserir()
         {
@@ -107,6 +108,9 @@ namespace Artes_da_lineh_final.Controllers
             ViewBag.mensagem=$"Produto {p.nome} excluido com sucesso";
             pr.delete(p);
             return View();
+        }
+        public IActionResult _Produtos(){
+            return PartialView();
         }
     }
 }

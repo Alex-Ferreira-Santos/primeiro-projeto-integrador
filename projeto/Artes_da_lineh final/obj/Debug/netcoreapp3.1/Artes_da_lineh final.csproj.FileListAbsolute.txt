@@ -163,3 +163,7 @@ C:\Users\Casa\OneDrive\Documents\curso senac\projeto 2\Artes_da_lineh final\obj\
 C:\Users\Casa\OneDrive\Documents\curso senac\projeto 2\Artes_da_lineh final\obj\Debug\netcoreapp3.1\Artes_da_lineh final.dll
 C:\Users\Casa\OneDrive\Documents\curso senac\projeto 2\Artes_da_lineh final\obj\Debug\netcoreapp3.1\Artes_da_lineh final.pdb
 C:\Users\Casa\OneDrive\Documents\curso senac\projeto 2\Artes_da_lineh final\obj\Debug\netcoreapp3.1\Artes_da_lineh final.genruntimeconfig.cache
+C:\Users\Casa\OneDrive\Documents\curso senac\projeto 2\Artes_da_lineh final\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Produtos.cshtml.g.cs
+C:\Users\Casa\OneDrive\Documents\curso senac\projeto 2\Artes_da_lineh final\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Desenhos.cshtml.g.cs
+C:\Users\Casa\OneDrive\Documents\curso senac\projeto 2\Artes_da_lineh final\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout2.cshtml.g.cs
+C:\Users\Casa\OneDrive\Documents\curso senac\projeto 2\Artes_da_lineh final\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Login.cshtml.g.cs

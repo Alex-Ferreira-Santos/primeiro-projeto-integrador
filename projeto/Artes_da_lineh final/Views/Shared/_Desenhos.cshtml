@@ -1,0 +1,10 @@
+@model ViewModel
+<link rel="stylesheet" href="~/css/Desenhos/_Desenhos3.css">
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+@foreach (Desenhos item in Model.listaDesenhos)
+{
+    <div id="desenhos" class="text-center m-2">
+        <img id="desenho" src="../imagens/@item.imagem" class="img-thumbnail rounded">
+        <p id="nome" class="m-0">@item.frase</p>
+    </div>
+}

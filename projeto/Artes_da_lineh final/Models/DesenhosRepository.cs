@@ -35,6 +35,26 @@ namespace Artes_da_lineh_final.Models
             conexao.Close();
             return lista;
         }
+        public List<Desenhos> main()
+        {
+            conexao.Open();
+            string sql="SELECT * FROM desenhos order by idDesenho desc limit 2";
+            MySqlCommand comando=new MySqlCommand(sql,conexao);
+            MySqlDataReader reader=comando.ExecuteReader();
+            List<Desenhos> lista=new List<Desenhos>();
+            while (reader.Read())
+            {
+                Desenhos d=new Desenhos();
+                d.id=reader.GetInt32("idDesenho");
+                if(!reader.IsDBNull(reader.GetOrdinal("imagemDesenho")))
+                    d.imagem=reader.GetString("imagemDesenho");
+                if(!reader.IsDBNull(reader.GetOrdinal("fraseDesenho")))
+                    d.frase=reader.GetString("fraseDesenho");
+                lista.Add(d);
+            }
+            conexao.Close();
+            return lista;
+        }
         public void update(Desenhos d)
         {
             conexao.Open();

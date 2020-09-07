@@ -1,6 +1,9 @@
 ﻿*{
   font-family: 'Poppins', sans-serif;
 }
+body{
+  background-color: #ffffe0 !important;
+}
 header{
   height: 180px;
   background-color: rgb(214, 255, 239);
@@ -14,12 +17,12 @@ header{
   bottom: 100px;
 }
 
-img#user{
+#user{
   position: absolute;
-  width: 100px;
-  top: 30px;
-  left: 1200px;
-  height: 100px;
+  right: 0;
+  width: 10vw;
+  top: 0.5em;
+  height: 10vw;
 }
 nav{
   text-align: center;
@@ -28,6 +31,10 @@ nav{
 }
 nav a{
   margin-left: 0.5em;
+  transition: 0.2s ease-in;
+}
+nav a:hover{
+  font-size: 1.2em;
 }
 body{
   font-family: Arial, Helvetica, sans-serif;
@@ -42,23 +49,64 @@ footer{
 #social-media a{
   margin-left: 1em;
 }
+
+#social-media label{
+  cursor: pointer;
+  width: 4em;
+  height: 4em;
+  margin-bottom: 0;
+}
+#facebook{
+  background-image: url("../imagens/00-facebook.png");
+  background-size: 4em;
+  transition: 0.4s;
+}
+#facebook:hover{
+  background-image: url("../imagens/facebook.png");
+}
+#instagram{
+  background-image: url("../imagens/011-instagram.png");
+  background-size: 4em;
+  transition: 0.2s;
+}
+#instagram:hover{
+  background-image: url("../imagens/01-instagram.png");
+}
+#pinterest{
+  background-image: url("../imagens/pinterest2.png");
+  background-size: 4em;
+  transition: 0.2s;
+}
+#pinterest:hover{
+  background-image: url("../imagens/pinterest.png");
+}
 h3{
   text-align: center;
   display: block;
 }
-@media(min-width:800px){
+@media(min-width:700px){
+  #logo{
+    width: 75%;
+  }
+}
+@media(min-width:990px){
   #logo{
     width: 50%;
-    height: 280px;
-    position: relative;
-    bottom: 100px;
   }
   nav a{
     margin-left: 1em;
     margin-right: 1em;
   }
   footer{
-    display: flex;
+    display: flex !important;
     align-items:center;
   }
+  #social-media{
+    width: 20em;
+  }
+  #copyright{
+    position: relative;
+    margin-right: 10vw;
+  }
 }
+

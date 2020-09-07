@@ -14,7 +14,12 @@ namespace Artes_da_lineh_final.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            ViewModel viewModel = new ViewModel();
+            viewModel.produtoRepository = new ProdutoRepository();
+            viewModel.desenhosRepository = new DesenhosRepository();
+            viewModel.listaProduto = viewModel.produtoRepository.main();
+            viewModel.listaDesenhos = viewModel.desenhosRepository.main();
+            return View(viewModel);
         }
         public IActionResult FaleConosco()
         {

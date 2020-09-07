@@ -14,9 +14,10 @@ namespace Artes_da_lineh_final.Controllers
     {
         public IActionResult Desenhos()
         {
-            DesenhosRepository dr =new DesenhosRepository();
-            List<Desenhos> desenho=dr.select();
-            return View(desenho);
+            ViewModel viewModel = new ViewModel();
+            viewModel.desenhosRepository = new DesenhosRepository();
+            viewModel.listaDesenhos = viewModel.desenhosRepository.select();
+            return View(viewModel);
         }
         public IActionResult Inserir()
         {
@@ -107,6 +108,12 @@ namespace Artes_da_lineh_final.Controllers
             ViewBag.mensagem=$"Produto {d.imagem} excluido com sucesso";
             pr.delete(d);
             return View();
+        }
+        public IActionResult _Desenhos(){
+            ViewModel viewModel = new ViewModel();
+            viewModel.desenhosRepository = new DesenhosRepository();
+            viewModel.listaDesenhos = viewModel.desenhosRepository.main();
+            return PartialView(viewModel);
         }
     }
 }

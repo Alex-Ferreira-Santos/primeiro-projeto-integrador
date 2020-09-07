@@ -23,10 +23,10 @@ namespace Artes_da_lineh_final.Controllers
             {
                 return RedirectToAction("Login","Usuario");
             }
-            PedidoRepository pr =new PedidoRepository();
-            p.dataPedido=DateTime.Now;
-            p.usuario=HttpContext.Session.GetString("nomeUsuarioUsuario");
-            pr.insert(p);
+            PedidoRepository pr = new PedidoRepository();
+            p.dataPedido = DateTime.Now;
+            p.usuario = HttpContext.Session.GetString("nomeUsuarioUsuario");
+            //pr.insert(p);
             ViewBag.mensagem=$"Pedido {p.pedido} realizado com sucesso";
             return View();
         }

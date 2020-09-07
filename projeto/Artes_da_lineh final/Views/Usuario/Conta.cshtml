@@ -1,29 +1,28 @@
 @model Usuario
-@{ViewData["Title"] = "Home Page";}
-<link rel="stylesheet" href="/css/Usuario/Conta2.css">
-<form method="POST">
+@{
+    ViewData["Title"] = "Nova conta";
+    Layout = "_Login";
+}
+<link rel="stylesheet" href="/css/Usuario/Conta.css">
+<form method="POST" class="mt-3">
     <fieldset>
-        <p id="viewbag">@ViewBag.mensagem</p>
-        <h2>Novo Usuario</h2>
-        <img src="/imagens/user.jpg" alt="foto de usuario">
-        <p>
-            <label asp-for="nome">Digite seu nome: </label>
-            <input asp-for="nome" placeholder="Digite seu nome aqui" required>
-        </p>
-        <p>
-            <label asp-for="email">Digite seu E-mail: </label>
-            <input asp-for="email" type="email" id="email" placeholder="Digite seu E-mail aqui" required>
-        </p>
-        <p>
-            <label asp-for="senha">Digite uma senha: </label>
-            <input asp-for="senha" type="password" id="senha" placeholder="Digite sua senha aqui" required>
-        </p>
-        <p>
-            <label asp-for="idade">Digite sua idade: </label>
-            <input asp-for="idade" type="number" id="idade" placeholder="Digite sua idade aqui" required>
-        </p>
-        <p><a asp-action="Index" asp-controller="Home"><input type="button" value="Cancelar" id="cancelar"></a></p>
-        <p><input type="submit" value="Concluir" id="concluir"></p>
+        <p id="viewbag" class="text-center">@ViewBag.mensagem</p>
+        <h2 class="text-center">Novo Usuario</h2>
+        <img src="/imagens/user1.png" id="imagem" class="rounded-circle" alt="foto de usuario">
+
+        <p><label asp-for="nome">Digite seu nome: </label></p>
+        <p><input asp-for="nome" placeholder="Digite seu nome aqui" required></p>
+
+        <p><label asp-for="email">Digite seu E-mail: </label></p>
+        <p><input asp-for="email" type="email" id="email" placeholder="Digite seu E-mail aqui" required></p>
+
+        <p><label asp-for="senha">Digite uma senha: </label></p>
+        <p><input asp-for="senha" type="password" id="senha" placeholder="Digite sua senha aqui" required></p>
+
+        <p><label asp-for="idade">Digite sua idade: </label></p>
+        <p><input asp-for="idade" type="number" id="idade" placeholder="Digite sua idade aqui" required></p>
+
+        <p><a asp-action="Index" asp-controller="Home"><input type="button" value="Cancelar" id="cancelar"></a> <input type="submit" value="Concluir" id="concluir"></p>
         <p id="viewbag1">@if(ViewBag.mensagem!=null){<a asp-action="Login">ir para a pagina de login</a>}</p>
     </fieldset>
 </form>
