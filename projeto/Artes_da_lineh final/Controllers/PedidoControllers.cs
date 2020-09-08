@@ -14,7 +14,12 @@ namespace Artes_da_lineh_final.Controllers
     {
         public IActionResult Encomendas()
         {
-            return View();
+            ViewModel viewModel = new ViewModel();
+            viewModel.usuarioRepository = new UsuarioRepository();
+            if(HttpContext.Session.GetInt32("idUsuarioUsuario")!=null){
+                viewModel.listaUsuario = viewModel.usuarioRepository.foto(HttpContext.Session.GetInt32("idUsuarioUsuario"));
+            }
+            return View(viewModel);
         }
         [HttpPost]
         public IActionResult Encomendas(Pedido p)
@@ -28,7 +33,12 @@ namespace Artes_da_lineh_final.Controllers
             p.usuario = HttpContext.Session.GetString("nomeUsuarioUsuario");
             pr.insert(p);
             ViewBag.mensagem=$"Pedido {p.pedido} realizado com sucesso";
-            return View();
+            ViewModel viewModel = new ViewModel();
+            viewModel.usuarioRepository = new UsuarioRepository();
+            if(HttpContext.Session.GetInt32("idUsuarioUsuario")!=null){
+                viewModel.listaUsuario = viewModel.usuarioRepository.foto(HttpContext.Session.GetInt32("idUsuarioUsuario"));
+            }
+            return View(viewModel);
         }
         public IActionResult Visualizar()
         {

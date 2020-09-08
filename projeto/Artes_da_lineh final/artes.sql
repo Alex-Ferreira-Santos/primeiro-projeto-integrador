@@ -8,7 +8,7 @@ senhaUsuario varchar(255) not null,
 idadeUsuario int(3) not null,
 avatarUsuario varchar(255),
 tipoUsuario int(1) not null);
-insert into usuario(nomeUsuario,emailUsuario,senhaUsuario,idadeUsuario,avatarUsuario,tipoUsuario) values("adm","a@mail.com","senha",17,"perfil.jpg",1);
+insert into usuario(nomeUsuario,emailUsuario,senhaUsuario,idadeUsuario,avatarUsuario,tipoUsuario) values("adm","a@mail.com","senha",17,"https://avatars2.githubusercontent.com/u/64551315?s=460&u=fa32da66ed4dc69a6dd818f3b8120c81a22b2baf&v=4",1);
 
 create table produtos(
 idProdutos int auto_increment primary key,

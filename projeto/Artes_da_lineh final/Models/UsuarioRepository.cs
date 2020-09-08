@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.IO;
 using MySql.Data.MySqlClient;
 namespace Artes_da_lineh_final.Models
 {
@@ -22,6 +23,33 @@ namespace Artes_da_lineh_final.Models
         {
             conexao.Open();
             string sql="SELECT * FROM usuario";
+            MySqlCommand comando=new MySqlCommand(sql,conexao);
+            MySqlDataReader reader=comando.ExecuteReader();
+            List<Usuario> lista=new List<Usuario>();
+            while (reader.Read())
+            {
+                Usuario u=new Usuario();
+                u.id=reader.GetInt32("idUsuario");
+                if(!reader.IsDBNull(reader.GetOrdinal("nomeUsuario")))
+                    u.nome=reader.GetString("nomeUsuario");
+                if(!reader.IsDBNull(reader.GetOrdinal("emailUsuario")))
+                    u.email=reader.GetString("emailUsuario");
+                if(!reader.IsDBNull(reader.GetOrdinal("senhaUsuario")))
+                    u.senha=reader.GetString("senhaUsuario");
+                if(!reader.IsDBNull(reader.GetOrdinal("idadeUsuario")))
+                    u.idade=reader.GetInt32("idadeUsuario");
+                if(!reader.IsDBNull(reader.GetOrdinal("tipoUsuario")))
+                    u.tipo=reader.GetInt32("tipoUsuario");
+                u.avatar=reader.GetString("avatarUsuario");
+                lista.Add(u);
+            }
+            conexao.Close();
+            return lista;
+        }
+        public List<Usuario> foto(int? id)
+        {
+            conexao.Open();
+            string sql=$"SELECT * FROM usuario where idUsuario={id}";
             MySqlCommand comando=new MySqlCommand(sql,conexao);
             MySqlDataReader reader=comando.ExecuteReader();
             List<Usuario> lista=new List<Usuario>();

@@ -1,4 +1,5 @@
 ﻿@using Microsoft.AspNetCore.Http
+@model ViewModel
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -6,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artes de Lineh - @ViewData["Title"]</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site3.css">
+    <link rel="stylesheet" href="~/css/site.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -21,14 +22,24 @@
             @if(Context.Session.GetInt32("idUsuarioUsuario")==1){<a asp-action="Menu" asp-controller="Home" id="menu" class="mr-0">Menu</a>}
         </nav>
 
-        <a asp-action="Login" asp-controller="Usuario"><img src="~/imagens/user1.png" alt="usuario" id="user"></a> 
+        @if(Context.Session.GetInt32("idUsuarioUsuario")==null){
+            <a asp-action="Login" asp-controller="Usuario"><img src="~/imagens/user1.png" alt="usuario" class="user"></a> 
+        }else{
+            foreach (Usuario item in Model.listaUsuario)
+            {
+              <a asp-action="Login" asp-controller="Usuario"><img src="@item.avatar" class="rounded-circle img-thumbnail user" alt="usuario"></a>   
+            }         
+        }
 
+        @if(Context.Session.GetInt32("idUsuarioUsuario")!=null){
+            <a asp-action="logout" asp-controller="Usuario"><img src="~/imagens/logout.png" alt="usuario" class="user" id="logout"></a>
+        }
     
-        <!--@if(Context.Session.GetInt32("idUsuarioUsuario")!=null){   }-->
-        <div id="nomeUser" class="text-center">
-            <p id="ola">Olá <b>@Context.Session.GetString("nomeUsuarioUsuario")</b>
-            <span id="logout"><a asp-controller="Usuario" asp-action="Logout">Logout</a></span></p>
-        </div>
+        @if(Context.Session.GetInt32("idUsuarioUsuario")!=null){
+            <div id="nomeUser" class="text-center">
+                <p id="ola">Olá <b>@Context.Session.GetString("nomeUsuarioUsuario")</b>
+            </div>   
+        }
         
 
     </header>

@@ -17,6 +17,10 @@ namespace Artes_da_lineh_final.Controllers
             ViewModel viewModel = new ViewModel();
             viewModel.produtoRepository = new ProdutoRepository();
             viewModel.listaProduto = viewModel.produtoRepository.select();
+            viewModel.usuarioRepository = new UsuarioRepository();
+            if(HttpContext.Session.GetInt32("idUsuarioUsuario")!=null){
+                viewModel.listaUsuario = viewModel.usuarioRepository.foto(HttpContext.Session.GetInt32("idUsuarioUsuario"));
+            }
             return View(viewModel);
         }
         public IActionResult Inserir()

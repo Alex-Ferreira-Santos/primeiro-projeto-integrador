@@ -1,0 +1,39 @@
+body{
+    background-color: rgb(230, 230, 230)!important;
+    display: flex;
+}
+section{
+    color: white;
+    display: inline-block !important;
+    background-color: rgb(34, 33, 33);
+    height: 100%;
+    /*width: 10em;*/
+}
+#opcoes{
+    padding: 0 1em;
+}
+.opcoes{
+    display: none;
+}
+main{
+    width: auto;
+}
+.categoria{
+    cursor: pointer;
+    list-style: none;
+    font-size: 1em;
+    display: block;
+}
+#menu{
+    width: 2em;
+    height: 2em;
+}
+.setaBaixo{
+    width: 1em;
+    height: 1em;
+    transition: 0.2s;
+    transform: rotate(90deg);
+}
+.ativado{
+    transform: rotate(180deg);
+}

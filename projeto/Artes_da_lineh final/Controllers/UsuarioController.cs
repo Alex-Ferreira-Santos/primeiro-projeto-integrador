@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Artes_da_lineh_final.Models;
 using Microsoft.AspNetCore.Http;
+using System.IO;
 
 namespace Artes_da_lineh_final.Controllers
 {
@@ -48,7 +49,10 @@ namespace Artes_da_lineh_final.Controllers
         {
             UsuarioRepository ur=new UsuarioRepository();
             u.tipo=0;
-            //ur.insert(u);
+            if(u.avatar==null){
+                u.avatar="/imagens/user1.png";
+            }
+            ur.insert(u);
             return RedirectToAction("Login","Usuario");
         }
         public IActionResult Listagem()

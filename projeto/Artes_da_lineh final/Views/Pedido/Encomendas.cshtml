@@ -1,4 +1,4 @@
-@model Pedido
+@model ViewModel
 @using Microsoft.AspNetCore.Http
 @{ViewData["Title"] = "Home Page";}
 <link rel="stylesheet" href="/css/Pedido/Encomendas4.css">
@@ -6,11 +6,11 @@
 <h3 class="text-center">Faça seu pedido!!!</h3>
 <form method="POST">
     <fieldset>
-        <p><label asp-for="nome">Nome: </label></p>
-        <p><input asp-for="nome" type="text" id="nome" class="border-0" placeholder="Nome Completo" required></p>
+        <p><label asp-for="pedido.nome">Nome: </label></p>
+        <p><input asp-for="pedido.nome" type="text" id="nome" class="border-0" placeholder="Nome Completo" required></p>
 
-        <p><label asp-for="estado">Estado: </label></p>
-        <p><select asp-for="estado" class="border-0" id="estado">
+        <p><label asp-for="pedido.estado">Estado: </label></p>
+        <p><select asp-for="pedido.estado" class="border-0" id="estado">
                 <option value="São Paulo">São Paulo</option>
                 <option value="Rio de Janeiro">Rio de Janeiro</option>
                 <option value="Minas Gerais">Minas Gerais</option>
@@ -41,14 +41,14 @@
             </select>
         </p>
 
-        <p><label asp-for="endereco">Endereço: </label></p>
-        <p><input asp-for="endereco" class="border-0" type="text" id="endereco" placeholder="Coloque seu endereço aqui" required></p>
+        <p><label asp-for="pedido.endereco">Endereço: </label></p>
+        <p><input asp-for="pedido.endereco" class="border-0" type="text" id="endereco" placeholder="Coloque seu endereço aqui" required></p>
 
-        <p><label asp-for="telefone">Telefone: </label></p>
-        <p><input asp-for="telefone" class="border-0" type="tel" id="telefone" placeholder="Coloque seu telefone aqui" required></p>
+        <p><label asp-for="pedido.telefone">Telefone: </label></p>
+        <p><input asp-for="pedido.telefone" class="border-0" type="tel" id="telefone" placeholder="Coloque seu telefone aqui" required></p>
 
-        <p><label asp-for="pedido">Pedido: </label></p>
-        <p><input asp-for="pedido" class="border-0" type="text" id="pedido" placeholder="Digite seu pedido" required></p>
+        <p><label asp-for="pedido.pedido">Pedido: </label></p>
+        <p><input asp-for="pedido.pedido" class="border-0" type="text" id="pedido" placeholder="Digite seu pedido" required></p>
 
         <p><input type="submit" class="border-0 submit" value="Confirmar"></p>
         @if(ViewBag.mensagem!=null){<p id="visualizar"><button class="border-0" id="lista"><a asp-action="Visualizar" id="linkLista">Ver a lista de produtos</a></button></p>}

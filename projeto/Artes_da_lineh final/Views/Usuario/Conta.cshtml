@@ -3,7 +3,7 @@
     ViewData["Title"] = "Nova conta";
     Layout = "_Login";
 }
-<link rel="stylesheet" href="/css/Usuario/Conta3.css">
+<link rel="stylesheet" href="/css/Usuario/Conta.css">
 <form method="POST" class="mt-3">
     <fieldset>
         <h2 class="text-center">Novo Usuario</h2>
@@ -22,9 +22,9 @@
         <p><input asp-for="idade" type="number" id="idade" placeholder="Digite sua idade aqui" required></p>
 
         <p><label asp-for="avatar"></label></p>
-        <p><input type="file" name="avatar" id="avatar"></p>
+        <p><input asp-for="avatar" type="url" name="avatar" id="avatar" placeholder="Digite a url da imagem aqui"></p>
 
         <p><a asp-action="Index" asp-controller="Home"><input type="button" value="Cancelar" id="cancelar"></a> <input type="submit" value="Concluir" id="concluir"></p>
     </fieldset>
 </form>
-<script src="~/js/conta.js"></script>
+<script src="~/js/conta2.js"></script>

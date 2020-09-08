@@ -17,18 +17,32 @@ namespace Artes_da_lineh_final.Controllers
             ViewModel viewModel = new ViewModel();
             viewModel.produtoRepository = new ProdutoRepository();
             viewModel.desenhosRepository = new DesenhosRepository();
+            viewModel.usuarioRepository = new UsuarioRepository();
+            if(HttpContext.Session.GetInt32("idUsuarioUsuario")!=null){
+                viewModel.listaUsuario = viewModel.usuarioRepository.foto(HttpContext.Session.GetInt32("idUsuarioUsuario"));
+            }
             viewModel.listaProduto = viewModel.produtoRepository.main();
             viewModel.listaDesenhos = viewModel.desenhosRepository.main();
             return View(viewModel);
         }
         public IActionResult FaleConosco()
         {
-            return View();
+            ViewModel viewModel = new ViewModel();
+            viewModel.usuarioRepository = new UsuarioRepository();
+            if(HttpContext.Session.GetInt32("idUsuarioUsuario")!=null){
+                viewModel.listaUsuario = viewModel.usuarioRepository.foto(HttpContext.Session.GetInt32("idUsuarioUsuario"));
+            }
+            return View(viewModel);
         }
         [HttpPost]
         public IActionResult FaleConosco(Mensagem m)
         {
-            return View();
+            ViewModel viewModel = new ViewModel();
+            viewModel.usuarioRepository = new UsuarioRepository();
+            if(HttpContext.Session.GetInt32("idUsuarioUsuario")!=null){
+                viewModel.listaUsuario = viewModel.usuarioRepository.foto(HttpContext.Session.GetInt32("idUsuarioUsuario"));
+            }
+            return View(viewModel);
         }
         public IActionResult Menu()
         {

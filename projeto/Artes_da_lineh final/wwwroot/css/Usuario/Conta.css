@@ -44,6 +44,8 @@ input{
         height: 30vw;
     }
     form{
+        width: 50vw;
+        margin: auto;
         margin-bottom: 1em;
     }
     #cancelar,#concluir{
