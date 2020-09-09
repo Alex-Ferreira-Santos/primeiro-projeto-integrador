@@ -55,26 +55,6 @@ namespace Artes_da_lineh_final.Controllers
             ur.insert(u);
             return RedirectToAction("Login","Usuario");
         }
-        public IActionResult Listagem()
-        {
-            if(HttpContext.Session.GetInt32("idUsuarioUsuario")==null)
-            {
-                return RedirectToAction("Login","Usuario");
-            }
-            else
-            {
-                if(HttpContext.Session.GetInt32("idUsuarioUsuario")==1)
-                {
-                    UsuarioRepository ur= new UsuarioRepository();
-                    List<Usuario> usuario=ur.select();
-                    return View(usuario);
-                }
-                else
-                {
-                    return RedirectToAction("Index","Home");
-                }
-            }
-        }
         public IActionResult Modificar()
         {
             if(HttpContext.Session.GetInt32("idUsuarioUsuario")==null)

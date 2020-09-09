@@ -1,10 +1,11 @@
+@using Microsoft.AspNetCore.Http
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artes de Lineh - @ViewData["Title"]</title>
-    <link rel="stylesheet" href="~/css/layout2.css">
+    <link rel="stylesheet" href="~/css/layout3.css">
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <style>
@@ -20,35 +21,53 @@
     <section>
         <img src="~/imagens/menu-1.png" id="menu" alt="menu">
         <ul id="opcoes">
-            <li class="categoria rotate-90"><img src="~/imagens/up-arrow.png" class="setaBaixo" id="desenho" alt="seta para baixo"> Desenhos</li>
-            <ul>
-                <li class="opcoes desenhos">Inserir</li>
-                <li class="opcoes desenhos">Editar</li>
-                <li class="opcoes desenhos">Excluir</li>
-            </ul>
-            <li class="categoria"><img src="~/imagens/up-arrow.png" alt="seta para baixo" class="setaBaixo" id="usuario"> Usuários</li>
-            <ul>
-                <li class="opcoes usuarios">Inserir</li>
-                <li class="opcoes usuarios">Editar</li>
-                <li class="opcoes usuarios">Excluir</li>
-            </ul>
-            <li class="categoria"><img src="~/imagens/up-arrow.png" alt="seta para baixo" class="setaBaixo" id="produto"> Produtos</li>
-            <ul>
-                <li class="opcoes produtos">Inserir</li>
-                <li class="opcoes produtos">Editar</li>
-                <li class="opcoes produtos">Excluir</li>
-            </ul>
-            <li class="categoria"><img src="~/imagens/up-arrow.png" alt="seta para baixo" class="setaBaixo" id="encomenda"> Encomendas</li>
-            <ul>
-                <li class="opcoes listagem">Listagem</li>
-            </ul>
+            @if(Context.Session.GetInt32("tipoUsuarioUsuario")==1){
+                <li class="categoria rotate-90"><img src="~/imagens/up-arrow.png" class="setaBaixo" id="desenho" alt="seta para baixo"> Desenhos</li>
+
+                <ul class="sessao">
+                    <a asp-action="Inserir" asp-controller="Desenho"><li class="opcoes desenhos insert"><img src="~/imagens/plusb.png" class="inserir"> Inserir</li></a>
+                    <a asp-action="Modificar" asp-controller="Desenho"><li class="opcoes desenhos edit"><img src="~/imagens/pencilb.png" class="editar"> Editar</li></a>
+                    <a asp-action="Excluir" asp-controller="Desenho"><li class="opcoes desenhos delete"><img src="~/imagens/binb.png" class="excluir"> Excluir</li></a>
+                </ul>
+
+                <li class="categoria"><img src="~/imagens/up-arrow.png" alt="seta para baixo" class="setaBaixo" id="produto"> Produtos</li>
+
+                <ul class="sessao">
+                    <a asp-action="Inserir" asp-controller="Produtos"><li class="opcoes produtos insert"><img src="~/imagens/plusb.png" class="inserir"> Inserir</li></a>
+                    <a asp-action="Modificar" asp-controller="Produtos"><li class="opcoes produtos edit"><img src="~/imagens/pencilb.png" class="editar"> Editar</li></a>
+                    <a asp-action="Excluir" asp-controller="Produtos"> <li class="opcoes produtos delete"><img src="~/imagens/binb.png" class="excluir"> Excluir</li></a>
+                </ul>
+
+                <li class="categoria"><img src="~/imagens/up-arrow.png" alt="seta para baixo" class="setaBaixo" id="usuario"> Usuários</li>
+
+                <ul class="sessao">
+                    <a asp-action="Conta" asp-controller="Usuario"><li class="opcoes usuarios insert"><img src="~/imagens/plusb.png" class="inserir"> Criar</li></a>
+                    <a asp-action="Modificar" asp-controller="Usuario"><li class="opcoes usuarios edit"><img src="~/imagens/pencilb.png" class="editar"> Editar</li></a>
+                </ul>
+
+                <li class="categoria"><img src="~/imagens/up-arrow.png" alt="seta para baixo" class="setaBaixo" id="encomenda"> Encomendas</li>
+
+                <ul class="sessao">
+                    <a asp-action="" asp-controller=""><li class="opcoes listagem list"><img src="~/imagens/documento.png" class="lista">Listagem</li></a>
+                </ul>
+                
+            }
+            @if(Context.Session.GetInt32("tipoUsuarioUsuario")==0){
+                <li class="categoria"><img src="~/imagens/up-arrow.png" alt="seta para baixo" class="setaBaixo" id="usuario"> Usuários</li>
+
+                <ul class="sessao">
+                    <a asp-action="Conta" asp-controller="Usuario"><li class="opcoes usuarios insert"><img src="~/imagens/plusb.png" class="inserir"> Criar</li></a>
+                    <a asp-action="Modificar" asp-controller="Usuario"><li class="opcoes usuarios edit"><img src="~/imagens/pencilb.png" class="editar"> Editar</li></a>
+                    <a asp-action="Excluir" asp-controller="Usuario"><li class="opcoes usuarios delete"><img src="~/imagens/binb.png" class="excluir"> Excluir</li></a>
+                </ul>
+            }
         </ul>
     </section>
     <main role="main" class="container position-relative text-center w-100">
         @RenderBody()
     </main>
     
-    <script src="~/js/layout.js" asp-append-version="true"></script>
+    <script src="~/js/layout2.js" asp-append-version="true"></script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>

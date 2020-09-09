@@ -149,7 +149,6 @@ C:\Users\Casa\OneDrive\Documents\curso senac\projeto 2\Artes_da_lineh final\obj\
 C:\Users\Casa\OneDrive\Documents\curso senac\projeto 2\Artes_da_lineh final\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\Casa\OneDrive\Documents\curso senac\projeto 2\Artes_da_lineh final\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Conta.cshtml.g.cs
 C:\Users\Casa\OneDrive\Documents\curso senac\projeto 2\Artes_da_lineh final\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Excluir.cshtml.g.cs
-C:\Users\Casa\OneDrive\Documents\curso senac\projeto 2\Artes_da_lineh final\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Listagem.cshtml.g.cs
 C:\Users\Casa\OneDrive\Documents\curso senac\projeto 2\Artes_da_lineh final\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Login.cshtml.g.cs
 C:\Users\Casa\OneDrive\Documents\curso senac\projeto 2\Artes_da_lineh final\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Modificar.cshtml.g.cs
 C:\Users\Casa\OneDrive\Documents\curso senac\projeto 2\Artes_da_lineh final\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs

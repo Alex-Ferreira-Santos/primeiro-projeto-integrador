@@ -52,14 +52,7 @@ namespace Artes_da_lineh_final.Controllers
             }
             else
             {
-                if(HttpContext.Session.GetInt32("idUsuarioUsuario")==1)
-                {
-                    return View();
-                }
-                else
-                {
-                    return RedirectToAction("Index","Home");
-                }
+                return RedirectToAction("Menu","Home");
             }
         }
     }
