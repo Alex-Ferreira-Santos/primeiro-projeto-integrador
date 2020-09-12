@@ -6,29 +6,69 @@ section{
     color: white;
     display: inline-block !important;
     background-color: rgb(34, 33, 33);
+    position: fixed;
     height: 100%;
-    /*width: 10em;*/
+    width: 11.5em;
+    transform: translate3d(-145px, 0, 0);
+    transition: transform .3s cubic-bezier(0, .52, 0, 1);
+    z-index: 1;
+}
+section.show{
+    transform: translate3d(0px, 0, 0);
+}
+section a{
+    text-decoration: none !important;
+    color: white !important;
+    cursor: pointer;
+}
+#menu{
+    cursor: pointer;
+    position: relative;
+    left: 9.2em;
+    width: 2em;
+    height: 2em;
 }
 #opcoes{
-    padding: 0 1em;
+    padding: 0 1.5em 0 1em;
 }
 .opcoes{
+    margin: 0.25em 0;
     display: none;
+}
+.sessao{
+    padding: 0 0 0 0.5em;
 }
 main{
     width: auto;
+    margin-top: 7em;
 }
 .categoria{
-    cursor: pointer;
+    margin-top: 1em;
     list-style: none;
     font-size: 1em;
     display: block;
 }
-#menu{
+.inserir,.editar,.excluir,.lista{
     width: 2em;
     height: 2em;
+    transition: 0.2s;
 }
+.insert:hover{
+    color: lightblue;
+}
+.edit:hover{
+    color: lightsalmon;
+}
+.delete:hover{
+    color: brown;
+}
+.list:hover{
+    color: aquamarine;
+}
+
+
 .setaBaixo{
+    cursor: pointer;
     width: 1em;
     height: 1em;
     transition: 0.2s;
@@ -36,4 +76,35 @@ main{
 }
 .ativado{
     transform: rotate(180deg);
+}
+
+fieldset{
+    padding-top: 1em;
+    text-align-last: center;
+    background-color: white;
+    width: 80vw;
+    margin: auto !important;
+    margin-bottom: 1em;
+}
+#img{
+    text-align-last: left;
+    padding-inline-start: 15px;
+}
+input,select{
+    outline: none;
+    background-color: rgba(173, 216, 230, 0.315);
+    border: 0;
+    border-radius: 15px;
+    width: 60vw;
+}
+@media(min-width:900px){
+    fieldset{
+        width: 60vw;
+    }
+    input,select{
+        width: 40vw;
+    }
+    #img{
+        padding-inline-start: 30px;
+    }
 }

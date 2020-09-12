@@ -113,5 +113,8 @@ namespace Artes_da_lineh_final.Controllers
         public IActionResult _Produtos(){
             return PartialView();
         }
+        public IActionResult Product(){
+            return View();
+        }
     }
 }
