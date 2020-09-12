@@ -52,7 +52,7 @@ namespace Artes_da_lineh_final.Controllers
             }
             else
             {
-                return RedirectToAction("Menu","Home");
+                return View();
             }
         }
     }

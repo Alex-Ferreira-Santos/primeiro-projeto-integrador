@@ -1,16 +1,27 @@
 @model Desenhos
-@{ViewData["Title"]="Exclusão de desenhos";}
-<link rel="stylesheet" href="~/css/Desenhos/Excluir2.css">
+@{
+    ViewData["Title"]="Exclusão de desenhos";
+    Layout = null;
+}
+<link rel="stylesheet" href="~/css/Desenhos/Excluir.css">
 <h2>Exclusão de desenhos</h2>
 <form asp-action="Excluir" method="post">
     <fieldset>
-        <p>@ViewBag.mensagem</p>
+
         <p><label asp-for="id">Selecione o id do desenho:</label></p>
         <p><input asp-for="id" placeholder="Digite o id aqui" required></p>
+
         <p><label asp-for="imagem">Selecione o desenho que quer excluir</label></p>
-        <p><input asp-for="imagem" type="file" required></p>
+        <p><input asp-for="imagem" type="file" id="img" required></p>
+
         <p><a asp-action="Index" asp-controller="Home"><input type="button" value="Cancelar" id="cancelar"></a></p>
-        <p><input type="submit" value="Excluir" id=excluir></p>
-        @if(ViewBag.mensagem!=null){<p><a asp-action="Desenhos" asp-controller="Desenho">Voltar a pagina de desenhos</a></p>}
+
+        <p><input type="submit" value="Excluir" id="excluir"></p>
+
     </fieldset>
 </form>
+<script>
+    $("#excluir").on("click",function() {
+        alert(`${$("#img").val()} excluido com sucesso`)
+    })
+</script>

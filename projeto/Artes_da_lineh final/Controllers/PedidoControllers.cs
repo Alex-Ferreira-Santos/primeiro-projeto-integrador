@@ -22,18 +22,18 @@ namespace Artes_da_lineh_final.Controllers
             return View(viewModel);
         }
         [HttpPost]
-        public IActionResult Encomendas(Pedido p)
+        public IActionResult Encomendas(ViewModel p)
         {
             if(HttpContext.Session.GetInt32("idUsuarioUsuario")==null)
             {
                 return RedirectToAction("Login","Usuario");
             }
-            PedidoRepository pr = new PedidoRepository();
-            p.dataPedido = DateTime.Now;
-            p.usuario = HttpContext.Session.GetString("nomeUsuarioUsuario");
-            pr.insert(p);
-            ViewBag.mensagem=$"Pedido {p.pedido} realizado com sucesso";
             ViewModel viewModel = new ViewModel();
+            viewModel.pedidoRepository = new PedidoRepository();
+            p.pedido.dataPedido = DateTime.Now;
+            p.pedido.usuario = HttpContext.Session.GetString("nomeUsuarioUsuario");
+            viewModel.pedidoRepository.insert(p.pedido);
+            ViewBag.mensagem=$"Pedido {p.pedido} realizado com sucesso";
             viewModel.usuarioRepository = new UsuarioRepository();
             if(HttpContext.Session.GetInt32("idUsuarioUsuario")!=null){
                 viewModel.listaUsuario = viewModel.usuarioRepository.foto(HttpContext.Session.GetInt32("idUsuarioUsuario"));
@@ -48,9 +48,26 @@ namespace Artes_da_lineh_final.Controllers
             }
             PedidoRepository pr =new PedidoRepository();
             Pedido p=new Pedido();
-            p.usuario=HttpContext.Session.GetString("nomeUsuarioUsuario");
             List<Pedido> lista=pr.select(p);
             return View(lista);
+        }
+        public IActionResult Uvisualizar()
+        {
+            if(HttpContext.Session.GetInt32("idUsuarioUsuario")==null)
+            {
+                return RedirectToAction("Login","Usuario");
+            }else{
+                if(HttpContext.Session.GetInt32("tipoUsuarioUsuario")==0){
+                    PedidoRepository pr =new PedidoRepository();
+                    Pedido p = new Pedido();
+                    p.usuario=HttpContext.Session.GetString("nomeUsuarioUsuario");
+                    List<Pedido> lista=pr.select(p);
+                    return View(lista);
+                }else{
+                    return RedirectToAction("Index","Home");
+                }
+            }
+            
         }
         public IActionResult Modificar()
         {

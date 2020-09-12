@@ -1,25 +1,52 @@
+@using Microsoft.AspNetCore.Http
 @model Usuario
-@{ViewData["Title"]="Edição de Usuários";}
-<link rel="stylesheet" href="~/css/Usuario/Modificar2.css">
+@{
+    ViewData["Title"]="Edição de Usuários";
+    Layout = null;
+}
+<link rel="stylesheet" href="~/css/Usuario/Modificar.css">
 <h2>Edição de Usuários</h2>
 <form asp-action="Modificar" method="post">
     <fieldset>
-        <p>@ViewBag.mensagem</p>
-        <p><label asp-for="id">Selecione o id do usuário que deseja alterar</label></p>
-        <p><input asp-for="id" placeholder="Digite o id aqui" required></p>
-        <p><label asp-for="email">Digite o email do usuário</label></p>
-        <p><input asp-for="email" type="email" placeholder="Digite o email aqui" required></p>
-        <p><label asp-for="senha">Digite a senha do usuário</label></p>
-        <p><input asp-for="senha" type="password" placeholder="Digite a senha aqui" required></p>
-        <p><label asp-for="tipo">Selecione o tipo do usuário</label></p>
-        <p>
-            <select asp-for="tipo" name="tipo" id="tipo" required>
-                <option value="0">Usuario</option>
-                <option value="1">Administrador</option>
-            </select>
-        </p>
+
+        @if(Context.Session.GetInt32("tipoUsuarioUsuario")==1){
+            <p><label asp-for="id">Selecione o id do usuário que deseja alterar</label></p>
+            <p><input asp-for="id" placeholder="Digite o id aqui" required></p>
+
+            <p><label asp-for="nome">Digite o novo nome</label></p>
+            <p><input asp-for="nome" placeholder="Digite o novo nome aqui" type="text" name="nome" id="nome" required></p>
+
+            <p><label asp-for="tipo">Selecione o tipo do usuário</label></p>
+            <p>
+                <select asp-for="tipo" name="tipo" id="tipo" required>
+                    <option value="0">Usuario</option>
+                    <option value="1">Administrador</option>
+                </select>
+            </p>
+        }
+
+        @if(Context.Session.GetInt32("tipoUsuarioUsuario")==0){
+
+            <p><label asp-for="nome">Digite o novo nome</label></p>
+            <p><input asp-for="nome" type="text" name="nome" id="nome" placeholder="Digite o novo nome aqui" required></p>
+
+            <p><label asp-for="avatar">Digite o novo avatar</label></p>
+            <p><input asp-for="avatar" type="url" name="avatar" id="avatar" placeholder="Digite a url da imagem aqui" required></p>
+
+            <p><label asp-for="email">Digite o email do usuário</label></p>
+            <p><input asp-for="email" type="email" placeholder="Digite o email aqui" required></p>
+
+            <p><label asp-for="senha">Digite a senha do usuário</label></p>
+            <p><input asp-for="senha" type="password" placeholder="Digite a senha aqui" required></p>
+
+        }
         <p><a asp-action="Index" asp-controller="Home"><input type="button" value="Cancelar" id="cancelar"></a></p>
+
         <p><input type="submit" value="Modificar" id="modificar"></p>
-        @if(ViewBag.mensagem!=null){<p><a asp-action="Listagem">Voltar a listagem</a></p>}
     </fieldset>
 </form>
+<script>
+    $("#modificar").on("click",function() {
+        alert(`${$("#nome").val()} modificado com sucesso`)
+    })
+</script>

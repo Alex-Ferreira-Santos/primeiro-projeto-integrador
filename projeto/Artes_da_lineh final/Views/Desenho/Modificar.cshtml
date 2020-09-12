@@ -1,18 +1,29 @@
 @model Desenhos
-@{ViewData["Title"]="Edição de Desenhos";}
-<link rel="stylesheet" href="~/css/Desenhos/Modificar2.css">
+@{
+    ViewData["Title"]="Edição de Desenhos";
+    Layout = null;
+}
+<link rel="stylesheet" href="~/css/Desenhos/Modificar.css">
 <h2>Edição de Desenhos</h2>
 <form asp-action="Modificar" method="post">
     <fieldset>
-        <p>@ViewBag.mensagem</p>
+
         <p><label asp-for="id">Digite o id do desenho aqui</label></p>
         <p><input asp-for="id" placeholder="Digite o id aqui" required></p>
+
         <p><label asp-for="imagem">Selecione a imagem do desenho que deseja alterar:</label></p>
-        <p><input asp-for="imagem" type="file" required></p>
+        <p><input asp-for="imagem" type="file" id="img" required></p>
+
         <p><label asp-for="frase">Digite a nova frase:</label></p>
         <p><input asp-for="frase" placeholder="Digite a nova frase do desenho" required></p>
+
         <p><a asp-action="Index" asp-controller="Home"><input type="button" value="Cancelar" id="cancelar"></a></p>
+
         <p><input type="submit" value="Modificar" id="modificar"></p>
-        <p>@if(ViewBag.mensagem!=null){<a asp-action="Desenhos" asp-controller="Desenho">Voltar a pagina de desenhos</a>}</p>
     </fieldset>
 </form>
+<script>
+    $("#modificar").on("click",function() {
+        alert(`${$("#frase").val()} modificado com sucesso`)
+    })
+</script>

@@ -167,3 +167,4 @@ C:\Users\Casa\OneDrive\Documents\curso senac\projeto 2\Artes_da_lineh final\obj\
 C:\Users\Casa\OneDrive\Documents\curso senac\projeto 2\Artes_da_lineh final\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout2.cshtml.g.cs
 C:\Users\Casa\OneDrive\Documents\curso senac\projeto 2\Artes_da_lineh final\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Login.cshtml.g.cs
 C:\Users\Casa\OneDrive\Documents\curso senac\projeto 2\Artes_da_lineh final\bin\Debug\netcoreapp3.1\package-lock.json
+C:\Users\Casa\OneDrive\Documents\curso senac\projeto 2\Artes_da_lineh final\obj\Debug\netcoreapp3.1\Razor\Views\Pedido\Uvisualizar.cshtml.g.cs

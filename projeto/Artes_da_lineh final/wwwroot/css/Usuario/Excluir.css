@@ -1,9 +1,9 @@
-#excluir{
+#deletar{
     color: white;
     background-color: rgba(255, 0, 0, 0.800);
     transition: 0.2s;
 }
-#excluir:hover{
+#deletar:hover{
     background-color: rgb(209, 0, 0);
 }
 #cancelar{

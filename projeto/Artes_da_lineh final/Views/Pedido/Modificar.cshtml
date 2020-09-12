@@ -1,5 +1,8 @@
 @model Pedido
-@{ViewData["Title"]="Edição de Pedidos";}
+@{
+    ViewData["Title"]="Edição de Pedidos";
+    Layout = null;
+}
 <link rel="stylesheet" href="~/css/Pedido/Edicao2.css">
 <h2>Edição de Pedidos</h2>
 <form asp-action="Modificar" method="post">

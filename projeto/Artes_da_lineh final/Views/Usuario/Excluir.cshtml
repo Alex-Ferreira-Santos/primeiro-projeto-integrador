@@ -1,15 +1,26 @@
 @model Usuario
-@{ViewData["Title"]="Exclusão de Usuarios";}
-<link rel="stylesheet" href="~/css/Usuario/Excluir2.css">
+@{
+    ViewData["Title"]="Exclusão de Usuarios";
+    Layout = null;
+}
+<link rel="stylesheet" href="~/css/Usuario/Excluir.css">
 <form asp-action="Excluir" method="post">
 <fieldset>
-    <p>@ViewBag.mensagem</p>
-    <p><label asp-for="id">Digite o id do usuário que deseja excluir</label></p>
-    <p><input asp-for="id" placeholder="Digite o id aqui" required></p>
+
     <p><label asp-for="email">Digite o email do usuário que deseja excluir</label></p>
-    <p><input asp-for="email" type="email" placeholder="Digite o email aqui" required></p>
+    <p><input asp-for="email" type="email" id="email" placeholder="Digite o email aqui" required></p>
+
+    <p><label asp-for="senha">Digite a senha do usuário que deseja excluir</label></p>
+    <p><input asp-for="senha" type="password" placeholder="Digite a senha aqui" required></p>
+
     <p><a asp-action="Index" asp-controller="Home"><input type="button" value="Cancelar" id="cancelar"></a></p>
+
     <p><input type="submit" value="Deletar" id="deletar"></p>
-    @if(ViewBag.mensagem!=null){<p><a asp-action="Index" asp-controller="Home">Voltar a home</a></p>}
+
 </fieldset>
 </form>
+<script>
+    $("#deletar").on("click",function() {
+        alert(`${$("#email").val()} excluido com sucesso`)
+    })
+</script>

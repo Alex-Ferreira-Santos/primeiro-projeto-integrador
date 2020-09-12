@@ -63,14 +63,7 @@ namespace Artes_da_lineh_final.Controllers
             }
             else
             {
-                if(HttpContext.Session.GetInt32("idUsuarioUsuario")==1)
-                {
-                    return View();
-                }
-                else
-                {
-                    return RedirectToAction("Index","Home");
-                }
+                return View();
             }
         }
         [HttpPost]
@@ -80,10 +73,15 @@ namespace Artes_da_lineh_final.Controllers
             {
                 return RedirectToAction("Login","Usuario");
             }
-            UsuarioRepository ur =new UsuarioRepository();
-            ur.updateU(u);
-            ViewBag.mensagem=$"Usuario {u.nome} modificado com sucesso";
-            return View();
+            UsuarioRepository ur = new UsuarioRepository();
+
+            if(HttpContext.Session.GetInt32("tipoUsuarioUsuario")==0){
+                ur.updateU(u,HttpContext.Session.GetInt32("idUsuarioUsuario"));
+            }
+            if(HttpContext.Session.GetInt32("tipoUsuarioUsuario")==1){
+                ur.updateA(u);
+            }
+            return RedirectToAction("Menu","Home");
         }
         public IActionResult Excluir()
         {
@@ -93,7 +91,7 @@ namespace Artes_da_lineh_final.Controllers
             }
             else
             {
-                if(HttpContext.Session.GetInt32("idUsuarioUsuario")==1)
+                if(HttpContext.Session.GetInt32("tipoUsuarioUsuario")==0)
                 {
                     return View();
                 }
@@ -111,9 +109,8 @@ namespace Artes_da_lineh_final.Controllers
                 return RedirectToAction("Login","Usuario");
             }
             UsuarioRepository ur =new UsuarioRepository();
-            ur.delete(u);
-            ViewBag.mensagem=$"Usuario {u.nome} excluido com sucesso";
-            return View();
+            ur.delete(u,HttpContext.Session.GetInt32("idUsuarioUsuario"));
+            return RedirectToAction("Menu","Home");
         }
     }
 }

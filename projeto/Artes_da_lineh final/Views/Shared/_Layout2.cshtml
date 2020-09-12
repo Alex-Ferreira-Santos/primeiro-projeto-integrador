@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artes de Lineh - @ViewData["Title"]</title>
-    <link rel="stylesheet" href="~/css/layout3.css">
+    <link rel="stylesheet" href="~/css/layout.css">
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <style>
@@ -25,30 +25,43 @@
                 <li class="categoria rotate-90"><img src="~/imagens/up-arrow.png" class="setaBaixo" id="desenho" alt="seta para baixo"> Desenhos</li>
 
                 <ul class="sessao">
-                    <a asp-action="Inserir" asp-controller="Desenho"><li class="opcoes desenhos insert"><img src="~/imagens/plusb.png" class="inserir"> Inserir</li></a>
-                    <a asp-action="Modificar" asp-controller="Desenho"><li class="opcoes desenhos edit"><img src="~/imagens/pencilb.png" class="editar"> Editar</li></a>
-                    <a asp-action="Excluir" asp-controller="Desenho"><li class="opcoes desenhos delete"><img src="~/imagens/binb.png" class="excluir"> Excluir</li></a>
+                    
+                    <a id="Dins"><li class="opcoes desenhos insert"><img src="~/imagens/plusb.png" class="inserir"> Inserir</li></a>
+
+                    <a id="Dedit"><li class="opcoes desenhos edit"><img src="~/imagens/pencilb.png" class="editar"> Editar</li></a>
+
+                    <a id="Ddele"><li class="opcoes desenhos delete"><img src="~/imagens/binb.png" class="excluir"> Excluir</li></a>
+
                 </ul>
 
                 <li class="categoria"><img src="~/imagens/up-arrow.png" alt="seta para baixo" class="setaBaixo" id="produto"> Produtos</li>
 
                 <ul class="sessao">
-                    <a asp-action="Inserir" asp-controller="Produtos"><li class="opcoes produtos insert"><img src="~/imagens/plusb.png" class="inserir"> Inserir</li></a>
-                    <a asp-action="Modificar" asp-controller="Produtos"><li class="opcoes produtos edit"><img src="~/imagens/pencilb.png" class="editar"> Editar</li></a>
-                    <a asp-action="Excluir" asp-controller="Produtos"> <li class="opcoes produtos delete"><img src="~/imagens/binb.png" class="excluir"> Excluir</li></a>
+
+                    <a id="Pins"><li class="opcoes produtos insert"><img src="~/imagens/plusb.png" class="inserir"> Inserir</li></a>
+
+                    <a id="Pedit"><li class="opcoes produtos edit"><img src="~/imagens/pencilb.png" class="editar"> Editar</li></a>
+
+                    <a id="Pdele"> <li class="opcoes produtos delete"><img src="~/imagens/binb.png" class="excluir"> Excluir</li></a>
+
                 </ul>
 
                 <li class="categoria"><img src="~/imagens/up-arrow.png" alt="seta para baixo" class="setaBaixo" id="usuario"> Usuários</li>
 
                 <ul class="sessao">
+
                     <a asp-action="Conta" asp-controller="Usuario"><li class="opcoes usuarios insert"><img src="~/imagens/plusb.png" class="inserir"> Criar</li></a>
-                    <a asp-action="Modificar" asp-controller="Usuario"><li class="opcoes usuarios edit"><img src="~/imagens/pencilb.png" class="editar"> Editar</li></a>
+
+                    <a id="Uedit"><li class="opcoes usuarios edit"><img src="~/imagens/pencilb.png" class="editar"> Editar</li></a>
+                    
                 </ul>
 
                 <li class="categoria"><img src="~/imagens/up-arrow.png" alt="seta para baixo" class="setaBaixo" id="encomenda"> Encomendas</li>
 
                 <ul class="sessao">
-                    <a asp-action="" asp-controller=""><li class="opcoes listagem list"><img src="~/imagens/documento.png" class="lista">Listagem</li></a>
+
+                    <a id="Llist"><li class="opcoes listagem list"><img src="~/imagens/documento.png" class="lista">Listagem</li></a>
+
                 </ul>
                 
             }
@@ -56,18 +69,50 @@
                 <li class="categoria"><img src="~/imagens/up-arrow.png" alt="seta para baixo" class="setaBaixo" id="usuario"> Usuários</li>
 
                 <ul class="sessao">
+
                     <a asp-action="Conta" asp-controller="Usuario"><li class="opcoes usuarios insert"><img src="~/imagens/plusb.png" class="inserir"> Criar</li></a>
-                    <a asp-action="Modificar" asp-controller="Usuario"><li class="opcoes usuarios edit"><img src="~/imagens/pencilb.png" class="editar"> Editar</li></a>
-                    <a asp-action="Excluir" asp-controller="Usuario"><li class="opcoes usuarios delete"><img src="~/imagens/binb.png" class="excluir"> Excluir</li></a>
+
+                    <a id="Uedit"><li class="opcoes usuarios edit"><img src="~/imagens/pencilb.png" class="editar"> Editar</li></a>
+
+                    <a id="Udele"><li class="opcoes usuarios delete"><img src="~/imagens/binb.png" class="excluir"> Excluir</li></a>
+                </ul>
+
+                <li class="categoria"><img src="~/imagens/up-arrow.png" alt="seta para baixo" class="setaBaixo" id="encomenda"> Encomendas</li>
+
+                <ul class="sessao">
+
+                    <a id="Lulist"><li class="opcoes listagem list"><img src="~/imagens/documento.png" class="lista">Listagem</li></a>
+
+                    <a id="Ledit"><li class="opcoes listagem edit"><img src="~/imagens/pencilb.png" class="editar">Editar</li></a>
+
+                    <a id="Ldele"><li class="opcoes listagem delete"><img src="~/imagens/binb.png" class="excluir">Excluir</li></a>
+
                 </ul>
             }
+
+            <li class="categoria"><img src="~/imagens/up-arrow.png" alt="seta para baixo" class="setaBaixo" id="site">Site</li>
+
+            <ul class="sessao"> 
+
+                <a asp-action="Index" asp-controller="Home"><li class="opcoes site home"> Home </li></a>
+
+                <a asp-action="Produtos" asp-controller="Produtos"><li class="opcoes site SProdutos"> Produtos </li></a>
+
+                <a asp-action="Desenhos" asp-controller="Desenho"><li class="opcoes site SDesenhos"> Desenhos </li></a>
+
+                <a asp-action="Encomendas" asp-controller="pedido"><li class="opcoes site SEncomendas"> Encomendas </li></a>
+
+                <a asp-action="FaleConosco" asp-controller="Home"><li class="opcoes site SFale"> Fale Conosco </li></a>
+
+            </ul>
+
         </ul>
     </section>
-    <main role="main" class="container position-relative text-center w-100">
+    <main role="main" class="container position-relative text-center w-100" id="main">
         @RenderBody()
     </main>
     
-    <script src="~/js/layout2.js" asp-append-version="true"></script>
+    <script src="~/js/layout2-.js" asp-append-version="true"></script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>

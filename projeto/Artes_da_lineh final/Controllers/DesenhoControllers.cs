@@ -31,7 +31,7 @@ namespace Artes_da_lineh_final.Controllers
             }
             else
             {
-                if(HttpContext.Session.GetInt32("idUsuarioUsuario")==1)
+                if(HttpContext.Session.GetInt32("tipoUsuarioUsuario")==1)
                 {
                     return View();
                 }
@@ -48,10 +48,9 @@ namespace Artes_da_lineh_final.Controllers
             {
                 return RedirectToAction("Login","Usuario");
             }
-            DesenhosRepository pr =new DesenhosRepository();
+            DesenhosRepository pr = new DesenhosRepository();
             pr.insert(d);
-            ViewBag.mensagem=$"Desenho {d.imagem} inserido com sucesso";
-            return View();
+            return RedirectToAction("Menu","Home");
         }
         public IActionResult Modificar()
         {
@@ -61,7 +60,7 @@ namespace Artes_da_lineh_final.Controllers
             }
             else
             {
-                if(HttpContext.Session.GetInt32("idUsuarioUsuario")==1)
+                if(HttpContext.Session.GetInt32("tipoUsuarioUsuario")==1)
                 {
                     return View();
                 }
@@ -81,7 +80,7 @@ namespace Artes_da_lineh_final.Controllers
             DesenhosRepository pr =new DesenhosRepository();
             pr.update(d);
             ViewBag.mensagem=$"Desenho {d.imagem} modificado com sucesso";
-            return View();
+            return RedirectToAction("Menu","Home");
         }
         public IActionResult Excluir()
         {
@@ -91,7 +90,7 @@ namespace Artes_da_lineh_final.Controllers
             }
             else
             {
-                if(HttpContext.Session.GetInt32("idUsuarioUsuario")==1)
+                if(HttpContext.Session.GetInt32("tipoUsuarioUsuario")==1)
                 {
                     return View();
                 }
@@ -110,8 +109,8 @@ namespace Artes_da_lineh_final.Controllers
             }
             DesenhosRepository pr =new DesenhosRepository();
             ViewBag.mensagem=$"Produto {d.imagem} excluido com sucesso";
-            pr.delete(d);
-            return View();
+            //pr.delete(d);
+            return RedirectToAction("Menu","Home");
         }
         public IActionResult _Desenhos(){
             ViewModel viewModel = new ViewModel();

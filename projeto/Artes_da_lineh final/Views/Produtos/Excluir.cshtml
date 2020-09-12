@@ -1,16 +1,26 @@
 @model Produto
-@{ViewData["Title"]="Exclusão de Produtos";}
-<link rel="stylesheet" href="~/css/Produto/Excluir2.css">
+@{
+    ViewData["Title"]="Exclusão de Produtos";
+    Layout = null;
+}
+<link rel="stylesheet" href="~/css/Produto/Excluir.css">
 <h2>Exclusão de Produtos</h2>
 <form asp-action="Excluir" method="post">
     <fieldset>
-        <p>@ViewBag.mensagem</p>
+
         <p><label asp-for="id">Selecione o id do produto que deseja deletar</label></p>
         <p><input asp-for="id" placeholder="Digite o id aqui" required></p>
+
         <p><label asp-for="nome">Digite o nome do produto que deseja excluir</label></p>
-        <p><input asp-for="nome" placeholder="Digite o nome do produto aqui" required></p>
+        <p><input asp-for="nome" placeholder="Digite o nome do produto aqui" id="nome" required></p>
+
         <p><a asp-action="Index" asp-controller="Home"><input type="button" value="Cancelar" id="cancelar"></a></p>
+
         <p><input type="submit" value="Excluir" id="excluir"></p>
-        <p>@if(ViewBag.mensagem!=null){<a asp-action="Produtos" asp-controller="Produtos">Voltar a pagina de produtos</a>}</p>
     </fieldset>
 </form>
+<script>
+    $("#excluir").on("click",function() {
+        alert(`${$("#nome").val()} inserido com sucesso`)
+    })
+</script>

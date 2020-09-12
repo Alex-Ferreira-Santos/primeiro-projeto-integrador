@@ -100,12 +100,12 @@ namespace Artes_da_lineh_final.Models
             conexao.Close();
             return usr;
         }
-        public void updateU(Usuario u)
+        public void updateU(Usuario u,int? id)
         {
             conexao.Open();
-            string sql="UPDATE usuario SET emailUsuario=@email,avatarUsuario=@avatar,senhaUsuario=@senha,tipoUsuario=@tipo where idUsuario=@id";
+            string sql=$"UPDATE usuario SET nomeUsuario=@nome,emailUsuario=@email,avatarUsuario=@avatar,senhaUsuario=@senha,tipoUsuario=@tipo where idUsuario={id}";
             MySqlCommand comando=new MySqlCommand(sql,conexao);
-            comando.Parameters.AddWithValue("@id",u.id);
+            comando.Parameters.AddWithValue("@nome",u.nome);
             comando.Parameters.AddWithValue("@email",u.email);
             comando.Parameters.AddWithValue("@avatar",u.avatar);
             comando.Parameters.AddWithValue("@senha",u.senha);
@@ -116,22 +116,19 @@ namespace Artes_da_lineh_final.Models
         public void updateA(Usuario u)
         {
             conexao.Open();
-            string sql="UPDATE usuario SET emailUsuario=@email,avatarUsuario=@avatar,senhaUsuario=@senha,tipoUsuario=@tipo where idUsuario=@id";
+            string sql="UPDATE usuario SET tipoUsuario=@tipo where nomeUsuario=@nome and idUsuario=@id";
             MySqlCommand comando=new MySqlCommand(sql,conexao);
             comando.Parameters.AddWithValue("@id",u.id);
-            comando.Parameters.AddWithValue("@email",u.email);
-            comando.Parameters.AddWithValue("@avatar",u.avatar);
-            comando.Parameters.AddWithValue("@senha",u.senha);
+            comando.Parameters.AddWithValue("@nome",u.nome);
             comando.Parameters.AddWithValue("@tipo",u.tipo);
             comando.ExecuteNonQuery();
             conexao.Close();
         }
-        public void delete(Usuario u)
+        public void delete(Usuario u,int? id)
         {
             conexao.Open();
-            string sql="DELETE FROM usuario where idUsuario=@id and emailUsuario=@email and senhaUsuario=@senha";
+            string sql=$"DELETE FROM usuario where idUsuario={id} and emailUsuario=@email and senhaUsuario=@senha";
             MySqlCommand comando=new MySqlCommand(sql,conexao);
-            comando.Parameters.AddWithValue("@id",u.id);
             comando.Parameters.AddWithValue("@email",u.email);
             comando.Parameters.AddWithValue("@senha",u.senha);
             comando.ExecuteNonQuery();

@@ -31,7 +31,7 @@ namespace Artes_da_lineh_final.Controllers
             }
             else
             {
-                if(HttpContext.Session.GetInt32("idUsuarioUsuario")==1)
+                if(HttpContext.Session.GetInt32("tipoUsuarioUsuario")==1)
                 {
                     return View();
                 }
@@ -50,8 +50,7 @@ namespace Artes_da_lineh_final.Controllers
             }
             ProdutoRepository pr =new ProdutoRepository();
             pr.insert(p);
-            ViewBag.mensagem=$"Produto {p.nome} inserido com sucesso";
-            return View();
+            return RedirectToAction("Menu","Home");
         }
         public IActionResult Modificar()
         {
@@ -61,7 +60,7 @@ namespace Artes_da_lineh_final.Controllers
             }
             else
             {
-                if(HttpContext.Session.GetInt32("idUsuarioUsuario")==1)
+                if(HttpContext.Session.GetInt32("tipoUsuarioUsuario")==1)
                 {
                     return View();
                 }
@@ -80,8 +79,7 @@ namespace Artes_da_lineh_final.Controllers
             }
             ProdutoRepository pr =new ProdutoRepository();
             pr.update(p);
-            ViewBag.mensagem=$"Produto {p.nome} modificado com sucesso";
-            return View();
+            return RedirectToAction("Menu","Home");
         }
         public IActionResult Excluir()
         {
@@ -91,7 +89,7 @@ namespace Artes_da_lineh_final.Controllers
             }
             else
             {
-                if(HttpContext.Session.GetInt32("idUsuarioUsuario")==1)
+                if(HttpContext.Session.GetInt32("tipoUsuarioUsuario")==1)
                 {
                     return View();
                 }
@@ -108,10 +106,9 @@ namespace Artes_da_lineh_final.Controllers
             {
                 return RedirectToAction("Login","Usuario");
             }
-            ProdutoRepository pr =new ProdutoRepository();
-            ViewBag.mensagem=$"Produto {p.nome} excluido com sucesso";
+            ProdutoRepository pr = new ProdutoRepository();
             pr.delete(p);
-            return View();
+            return RedirectToAction("Menu","Home");
         }
         public IActionResult _Produtos(){
             return PartialView();

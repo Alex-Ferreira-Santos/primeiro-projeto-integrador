@@ -14447,6 +14447,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\curso senac\\projeto 2\\Artes_da_lineh final\\Views\\Pedido\\Uvisualizar.cshtml",
+      "TargetPath": "Views\\Pedido\\Uvisualizar.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\curso senac\\projeto 2\\Artes_da_lineh final\\Views\\Desenho\\Modificar.cshtml",
       "TargetPath": "Views\\Desenho\\Modificar.cshtml",
       "FileKind": "mvc"
@@ -14474,11 +14479,6 @@
     {
       "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\curso senac\\projeto 2\\Artes_da_lineh final\\Views\\Produtos\\Excluir.cshtml",
       "TargetPath": "Views\\Produtos\\Excluir.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\curso senac\\projeto 2\\Artes_da_lineh final\\Views\\Usuario\\Listagem.cshtml",
-      "TargetPath": "Views\\Usuario\\Listagem.cshtml",
       "FileKind": "mvc"
     },
     {
