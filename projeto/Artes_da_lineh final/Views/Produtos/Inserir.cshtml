@@ -3,10 +3,11 @@
     ViewData["Title"]="Inserção de Produtos";
     Layout = null;
 }
-<link rel="stylesheet" href="~/css/Produto/Inserir.css">
+<link rel="stylesheet" href="~/css/Produto/Inserir3.css">
 <h2>Inserção de Produtos</h2>
 <form asp-action="Inserir" method="post">
     <fieldset>
+        <p class="invisible"><img id="imag" class="invisible" alt="imagem"></p>
 
         <p><label asp-for="imagem">Selecione a uma imagem: </label></p>
         <p><input asp-for="imagem" type="file" required id="img"></p>
@@ -23,8 +24,5 @@
 
     </fieldset>
 </form>
-<script>
-    $("#inserir").on("click",function() {
-        alert(`${$("#nome").val()} inserido com sucesso`)
-    })
-</script>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/js/inserirProduto.js"></script>

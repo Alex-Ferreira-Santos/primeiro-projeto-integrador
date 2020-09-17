@@ -14457,6 +14457,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\curso senac\\projeto 2\\Artes_da_lineh final\\Views\\Produtos\\Product.cshtml",
+      "TargetPath": "Views\\Produtos\\Product.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\curso senac\\projeto 2\\Artes_da_lineh final\\Views\\Desenho\\Excluir.cshtml",
       "TargetPath": "Views\\Desenho\\Excluir.cshtml",
       "FileKind": "mvc"
