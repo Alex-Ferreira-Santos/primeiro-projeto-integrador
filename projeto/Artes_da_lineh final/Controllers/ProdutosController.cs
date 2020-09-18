@@ -49,7 +49,7 @@ namespace Artes_da_lineh_final.Controllers
                 return RedirectToAction("Login","Usuario");
             }
             ProdutoRepository pr =new ProdutoRepository();
-            pr.insert(p);
+            //pr.insert(p);
             return RedirectToAction("Menu","Home");
         }
         public IActionResult Modificar()
@@ -113,8 +113,28 @@ namespace Artes_da_lineh_final.Controllers
         public IActionResult _Produtos(){
             return PartialView();
         }
-        public IActionResult Product(){
-            return View();
+
+        public IActionResult Product(int id=1){
+            ViewModel viewModel = new ViewModel();
+            viewModel.produtoRepository = new ProdutoRepository();
+            viewModel.listaProduto = viewModel.produtoRepository.product(id);
+            viewModel.usuarioRepository = new UsuarioRepository();
+            if(HttpContext.Session.GetInt32("idUsuarioUsuario")!=null){
+                viewModel.listaUsuario = viewModel.usuarioRepository.foto(HttpContext.Session.GetInt32("idUsuarioUsuario"));
+            }
+            return View(viewModel);
+        }
+        [HttpPost]
+        public IActionResult Product(List<string> imagem,int id=1){
+            ViewModel viewModel = new ViewModel();
+            viewModel.produtoRepository = new ProdutoRepository();
+            viewModel.produto.imagens = imagem;
+            viewModel.listaProduto = viewModel.produtoRepository.product(id);
+            viewModel.usuarioRepository = new UsuarioRepository();
+            if(HttpContext.Session.GetInt32("idUsuarioUsuario")!=null){
+                viewModel.listaUsuario = viewModel.usuarioRepository.foto(HttpContext.Session.GetInt32("idUsuarioUsuario"));
+            }
+            return View(viewModel);
         }
     }
 }

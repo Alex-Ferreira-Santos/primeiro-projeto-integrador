@@ -8,9 +8,13 @@
 <form asp-action="Inserir" method="post">
     <fieldset>
         <p class="invisible"><img id="imag" class="invisible" alt="imagem"></p>
+        <p><button id="confirmaImagem" class="invisible">confirmar</button> <button id="cancelaImagem" class="invisible">cancelar</button></p>
 
-        <p><label asp-for="imagem">Selecione a uma imagem: </label></p>
+        <p><label asp-for="imagem">Selecione a uma imagem-capa: </label></p>
         <p><input asp-for="imagem" type="file" required id="img"></p>
+
+        <p><label asp-for="imagens">Selecione as outras imagens do produto: </label></p>
+        <p><input asp-for="imagens" type="file" required id="imagem"></p>
 
         <p><label asp-for="nome">Digite o nome: </label></p>
         <p><input asp-for="nome" placeholder="Digite o nome do produto aqui" id="nome" required></p>
@@ -18,11 +22,11 @@
         <p><label asp-for="preco">Digite o preço aqui: </label></p>
         <p><input asp-for="preco" placeholder="Digite o preço do produto aqui" required></p>
 
-        <p><a asp-action="Index" asp-controller="Home"><input type="button" value="Cancelar" id="cancelar"></a></p>
+        <p><a asp-action="Index" asp-controller="Home"><input type="button" class="btn btn-danger" value="Cancelar" id="cancelar"></a></p>
 
-        <p><input type="submit" value="Inserir" id="inserir"></p>
+        <p><input type="submit" class="btn btn-success" value="Inserir" id="inserir"></p>
 
     </fieldset>
 </form>
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
-<script src="~/js/inserirProduto.js"></script>
+<script src="~/js/inserirProduto2.js"></script>

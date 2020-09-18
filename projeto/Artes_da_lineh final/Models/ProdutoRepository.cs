@@ -38,6 +38,28 @@ namespace Artes_da_lineh_final.Models
             conexao.Close();
             return lista;
         }
+        public List<Produto> product(int id)
+        {
+            conexao.Open();
+            string sql=$"SELECT * FROM produtos where idProdutos={id}";
+            MySqlCommand comando=new MySqlCommand(sql,conexao);
+            MySqlDataReader reader=comando.ExecuteReader();
+            List<Produto> lista=new List<Produto>();
+            while (reader.Read())
+            {
+                Produto p=new Produto();
+                p.id=reader.GetInt32("idProdutos");
+                if(!reader.IsDBNull(reader.GetOrdinal("nomeProdutos")))
+                    p.nome=reader.GetString("nomeProdutos");
+                if(!reader.IsDBNull(reader.GetOrdinal("imagemProdutos")))
+                    p.imagem=reader.GetString("imagemProdutos");
+                if(!reader.IsDBNull(reader.GetOrdinal("precoProdutos")))
+                    p.preco=reader.GetDouble("precoProdutos");
+                lista.Add(p);
+            }
+            conexao.Close();
+            return lista;
+        }
         public List<Produto> main(){
             conexao.Open();
             string sql="SELECT * FROM produtos order by idProdutos desc limit 2";
