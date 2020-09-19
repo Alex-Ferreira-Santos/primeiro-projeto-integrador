@@ -114,10 +114,10 @@ namespace Artes_da_lineh_final.Controllers
             return PartialView();
         }
 
-        public IActionResult Product(int id=1){
+        public IActionResult Product(List<string> imagem,int id=1){
             ViewModel viewModel = new ViewModel();
             viewModel.produtoRepository = new ProdutoRepository();
-            viewModel.listaProduto = viewModel.produtoRepository.product(id);
+            viewModel.listaProduto = viewModel.produtoRepository.product(id,imagem);
             viewModel.usuarioRepository = new UsuarioRepository();
             if(HttpContext.Session.GetInt32("idUsuarioUsuario")!=null){
                 viewModel.listaUsuario = viewModel.usuarioRepository.foto(HttpContext.Session.GetInt32("idUsuarioUsuario"));
@@ -125,11 +125,11 @@ namespace Artes_da_lineh_final.Controllers
             return View(viewModel);
         }
         [HttpPost]
-        public IActionResult Product(List<string> imagem,int id=1){
+        public IActionResult Product(List<string> imagem,Produto p,int id=1){
             ViewModel viewModel = new ViewModel();
             viewModel.produtoRepository = new ProdutoRepository();
-            viewModel.produto.imagens = imagem;
-            viewModel.listaProduto = viewModel.produtoRepository.product(id);
+            Console.WriteLine(imagem.Count + " Controller");
+            viewModel.listaProduto = viewModel.produtoRepository.product(id,imagem);
             viewModel.usuarioRepository = new UsuarioRepository();
             if(HttpContext.Session.GetInt32("idUsuarioUsuario")!=null){
                 viewModel.listaUsuario = viewModel.usuarioRepository.foto(HttpContext.Session.GetInt32("idUsuarioUsuario"));

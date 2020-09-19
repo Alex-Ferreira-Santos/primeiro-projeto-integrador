@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using MySql.Data.MySqlClient;
+using System;
 
 namespace Artes_da_lineh_final.Models
 {
@@ -38,7 +39,7 @@ namespace Artes_da_lineh_final.Models
             conexao.Close();
             return lista;
         }
-        public List<Produto> product(int id)
+        public List<Produto> product(int id,List<string> imagem)
         {
             conexao.Open();
             string sql=$"SELECT * FROM produtos where idProdutos={id}";
@@ -55,6 +56,8 @@ namespace Artes_da_lineh_final.Models
                     p.imagem=reader.GetString("imagemProdutos");
                 if(!reader.IsDBNull(reader.GetOrdinal("precoProdutos")))
                     p.preco=reader.GetDouble("precoProdutos");
+                p.imagens = imagem;
+                Console.WriteLine(p.imagens.Count + " Model");
                 lista.Add(p);
             }
             conexao.Close();
