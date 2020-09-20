@@ -15,8 +15,6 @@
         <p><label asp-for="imagem1">Selecione uma imagem para o produto: </label></p>
         <p><input asp-for="imagem1" type="file" id="imagem1" class="imagem"></p>
 
-        <p><button id="add" class="btn btn-outline-info">Adicionar outra imagem</button></p>
-
         <p><label asp-for="imagem2" id="label2" class="invisibleImg" >Selecione a 2° imagem para o produto: </label></p>
         <p><input asp-for="imagem2" type="file" id="imagem2" class="invisibleImg"></p>
 
@@ -28,6 +26,8 @@
 
         <p><label asp-for="imagem5" id="label5" class="invisibleImg" >Selecione a 5° imagem para o produto: </label></p>
         <p><input asp-for="imagem5" type="file" id="imagem5" class="invisibleImg"></p>
+
+        <p><button id="add" class="btn btn-outline-info">Adicionar outra imagem</button></p>
 
         <p><label asp-for="nome">Digite o nome: </label></p>
         <p><input asp-for="nome" placeholder="Digite o nome do produto aqui" id="nome" required></p>
@@ -42,4 +42,4 @@
     </fieldset>
 </form>
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
-<script src="~/js/inserirProduto2.js"></script>
+<script src="~/js/inserirProduto.js"></script>
