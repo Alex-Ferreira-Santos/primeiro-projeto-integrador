@@ -3,18 +3,31 @@
     ViewData["Title"]="Inserção de Produtos";
     Layout = null;
 }
-<link rel="stylesheet" href="~/css/Produto/Inserir.css">
+<link rel="stylesheet" href="~/css/Produto/Inserir1.css">
 <h2>Inserção de Produtos</h2>
 <form asp-action="Inserir" method="post">
     <fieldset>
         <p class="invisible"><img id="imag" class="invisible" alt="imagem"></p>
-        <p><button id="confirmaImagem" class="invisible">confirmar</button> <button id="cancelaImagem" class="invisible">cancelar</button></p>
-
-        <p><label asp-for="imagem">Selecione a uma imagem-capa: </label></p>
+        
+        <p><label asp-for="imagem">Selecione a uma imagem-capa do produto: </label></p>
         <p><input asp-for="imagem" type="file" required id="img"></p>
 
-        <p><label asp-for="imagens">Selecione as outras imagens do produto: </label></p>
-        <p><input asp-for="imagens" type="file" required id="imagem"></p>
+        <p><label asp-for="imagem1">Selecione uma imagem para o produto: </label></p>
+        <p><input asp-for="imagem1" type="file" id="imagem1" class="imagem"></p>
+
+        <p><button id="add" class="btn btn-outline-info">Adicionar outra imagem</button></p>
+
+        <p><label asp-for="imagem2" id="label2" class="invisibleImg" >Selecione a 2° imagem para o produto: </label></p>
+        <p><input asp-for="imagem2" type="file" id="imagem2" class="invisibleImg"></p>
+
+        <p><label asp-for="imagem3" id="label3" class="invisibleImg" >Selecione a 3° imagem para o produto: </label></p>
+        <p><input asp-for="imagem3" type="file" id="imagem3" class="invisibleImg"></p>
+
+        <p><label asp-for="imagem4" id="label4" class="invisibleImg" >Selecione a 4° imagem para o produto: </label></p>
+        <p><input asp-for="imagem4" type="file" id="imagem4" class="invisibleImg"></p>
+
+        <p><label asp-for="imagem5" id="label5" class="invisibleImg" >Selecione a 5° imagem para o produto: </label></p>
+        <p><input asp-for="imagem5" type="file" id="imagem5" class="invisibleImg"></p>
 
         <p><label asp-for="nome">Digite o nome: </label></p>
         <p><input asp-for="nome" placeholder="Digite o nome do produto aqui" id="nome" required></p>
@@ -29,4 +42,4 @@
     </fieldset>
 </form>
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
-<script src="~/js/inserirProduto.js"></script>
+<script src="~/js/inserirProduto2.js"></script>

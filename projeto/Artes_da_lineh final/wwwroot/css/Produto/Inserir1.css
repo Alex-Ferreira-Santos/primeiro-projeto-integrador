@@ -1,0 +1,35 @@
+#cancelar{
+    color: white;
+    background-color: rgba(255, 0, 0, 0.800);
+    transition: 0.2s;
+}
+#cancelar:hover{
+    background-color: rgb(209, 0, 0);
+}
+#inserir{
+    color: white;
+    background-color: green;
+    transition: 0.2s;
+}
+#inserir:hover{
+    background-color: rgb(0, 102, 0);
+}
+.invisible,.invisibleImg{
+    display: none;
+}
+.visibel{
+    display: initial;
+}
+#imag{
+    width: 40vw;
+    height: 40vw;
+}
+fieldset{
+    padding-top: 1em;
+}
+@media(min-width:990px){
+    #imag{
+        width: 30vw;
+        height: 30vw;
+    }
+}

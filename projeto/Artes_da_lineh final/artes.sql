@@ -1,5 +1,5 @@
 create database artes;
-drop table usuario;
+
 create table usuario(
 idUsuario int auto_increment primary key,
 nomeUsuario varchar(255) not null,
@@ -13,6 +13,11 @@ insert into usuario(nomeUsuario,emailUsuario,senhaUsuario,idadeUsuario,avatarUsu
 create table produtos(
 idProdutos int auto_increment primary key,
 imagemProdutos varchar(255) not null,
+imagem1Produtos varchar(255),
+imagem2Produtos varchar(255),
+imagem3Produtos varchar(255),
+imagem4Produtos varchar(255),
+imagem5Produtos varchar(255),
 nomeProdutos varchar(255) not null,
 precoProdutos double(9,2) not null);
 

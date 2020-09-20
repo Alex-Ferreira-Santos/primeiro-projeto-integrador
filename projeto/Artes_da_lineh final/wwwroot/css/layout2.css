@@ -86,7 +86,7 @@ fieldset{
     margin: auto !important;
     margin-bottom: 1em;
 }
-#img{
+#img,.imagem,#imagem2,#imagem3,#imagem4,#imagem5{
     text-align-last: left;
     padding-inline-start: 15px;
 }
@@ -97,6 +97,7 @@ input,select{
     border-radius: 15px;
     width: 60vw;
 }
+
 @media(min-width:900px){
     fieldset{
         width: 60vw;
@@ -104,7 +105,7 @@ input,select{
     input,select{
         width: 40vw;
     }
-    #img{
+    #img,.imagem,#imagem2,#imagem3,#imagem4,#imagem5{
         padding-inline-start: 30px;
     }
 }
