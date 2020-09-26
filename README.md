@@ -6,3 +6,5 @@ fiz um pequeno e-commerce com o que eu sabia na época mas é bem basico, foi fe
 obs: para inserir uma imagem, primeiro coloque ela na pasta de imagens
 
 aceito dicas de como melhorar o projeto também
+
+para rodar o projeto digite dotnet run no terminal
