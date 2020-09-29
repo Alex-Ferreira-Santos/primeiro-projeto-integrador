@@ -3,16 +3,34 @@
     ViewData["Title"]="Edição de Produtos";
     Layout = null;
 }
-<link rel="stylesheet" href="~/css/Produto/Modificar.css">
+<link rel="stylesheet" href="~/css/Produto/Modificar2.css">
 <h2>Edição de Produtos</h2>
 <form asp-action="Modificar" method="post">
     <fieldset>
+        <p class="invisible"><img id="imag" class="invisible" alt="imagem"></p>
 
         <p><label asp-for="id">Selecione o id do produto: </label></p>
         <p><input asp-for="id" placeholder="Digite o id aqui" required></p>
 
-        <p><label asp-for="imagem">Selecione a nova imagem desejada: </label></p>
+        <p><label asp-for="imagem">Selecione a nova imagem capa desejada: </label></p>
         <p><input asp-for="imagem" type="file" id="img" required></p>
+
+        <p><label asp-for="imagem1">Selecione uma imagem para o produto: </label></p>
+        <p><input asp-for="imagem1" type="file" id="imagem1" class="imagem"></p>
+
+        <p><label asp-for="imagem2" id="label2" class="invisibleImg" >Selecione a 2° imagem para o produto: </label></p>
+        <p><input asp-for="imagem2" type="file" id="imagem2" class="invisibleImg"></p>
+
+        <p><label asp-for="imagem3" id="label3" class="invisibleImg" >Selecione a 3° imagem para o produto: </label></p>
+        <p><input asp-for="imagem3" type="file" id="imagem3" class="invisibleImg"></p>
+
+        <p><label asp-for="imagem4" id="label4" class="invisibleImg" >Selecione a 4° imagem para o produto: </label></p>
+        <p><input asp-for="imagem4" type="file" id="imagem4" class="invisibleImg"></p>
+
+        <p><label asp-for="imagem5" id="label5" class="invisibleImg" >Selecione a 5° imagem para o produto: </label></p>
+        <p><input asp-for="imagem5" type="file" id="imagem5" class="invisibleImg"></p>
+
+        <p><button id="add" class="btn btn-outline-info">Adicionar outra imagem</button></p>
 
         <p><label asp-for="nome">Digite o novo nome do produto: </label></p>
         <p><input asp-for="nome" placeholder="Digite o nome aqui" id="nome" required></p>
@@ -25,6 +43,7 @@
         <p><input type="submit" value="Modificar" id="modificar"></p>
     </fieldset>
 </form>
+<script src="~/js/inserirProduto.js"></script>
 <script>
     $("#modificar").on("click",function() {
         alert(`${$("#nome").val()} modificado com sucesso`)

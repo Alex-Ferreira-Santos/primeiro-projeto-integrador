@@ -14,3 +14,22 @@
 #modificar:hover{
     background-color: rgb(212, 143, 82);
 }
+.invisible,.invisibleImg{
+    display: none;
+}
+.visibel{
+    display: initial;
+}
+#imag{
+    width: 40vw;
+    height: 40vw;
+}
+fieldset{
+    padding-top: 1em;
+}
+@media(min-width:990px){
+    #imag{
+        width: 30vw;
+        height: 30vw;
+    }
+}

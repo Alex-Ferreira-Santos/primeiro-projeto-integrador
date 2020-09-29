@@ -95,10 +95,15 @@ namespace Artes_da_lineh_final.Models
         public void update(Produto p)
         {
             conexao.Open();
-            string sql="UPDATE produtos SET imagemProdutos=@imagem,nomeProdutos=@nome,precoProdutos=@preco where idProdutos=@id";
+            string sql="UPDATE produtos SET imagemProdutos=@imagem,imagem1Produtos=@imagem1,imagem2Produtos=@imagem2,imagem3Produtos=@imagem3,imagem4Produtos=@imagem4,imagem5Produtos=@imagem5,nomeProdutos=@nome,precoProdutos=@preco where idProdutos=@id";
             MySqlCommand comando=new MySqlCommand(sql,conexao);
             comando.Parameters.AddWithValue("@id",p.id);
             comando.Parameters.AddWithValue("@imagem",p.imagem);
+            comando.Parameters.AddWithValue("@imagem1",p.imagem1);
+            comando.Parameters.AddWithValue("@imagem2",p.imagem2);
+            comando.Parameters.AddWithValue("@imagem3",p.imagem3);
+            comando.Parameters.AddWithValue("@imagem4",p.imagem4);
+            comando.Parameters.AddWithValue("@imagem5",p.imagem5);
             comando.Parameters.AddWithValue("@nome",p.nome);
             comando.Parameters.AddWithValue("@preco",p.preco);
             comando.ExecuteNonQuery();
