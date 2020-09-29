@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Casa\\OneDrive\\Documents\\curso senac\\projeto 2\\Artes_da_lineh final\\Artes_da_lineh final.csproj": {}
+    "C:\\Users\\Casa\\OneDrive\\Documents\\GitHub\\primeiro-projeto-integrador\\projeto\\Artes_da_lineh final\\Artes_da_lineh final.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Casa\\OneDrive\\Documents\\curso senac\\projeto 2\\Artes_da_lineh final\\Artes_da_lineh final.csproj": {
+    "C:\\Users\\Casa\\OneDrive\\Documents\\GitHub\\primeiro-projeto-integrador\\projeto\\Artes_da_lineh final\\Artes_da_lineh final.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Casa\\OneDrive\\Documents\\curso senac\\projeto 2\\Artes_da_lineh final\\Artes_da_lineh final.csproj",
+        "projectUniqueName": "C:\\Users\\Casa\\OneDrive\\Documents\\GitHub\\primeiro-projeto-integrador\\projeto\\Artes_da_lineh final\\Artes_da_lineh final.csproj",
         "projectName": "Artes_da_lineh final",
-        "projectPath": "C:\\Users\\Casa\\OneDrive\\Documents\\curso senac\\projeto 2\\Artes_da_lineh final\\Artes_da_lineh final.csproj",
+        "projectPath": "C:\\Users\\Casa\\OneDrive\\Documents\\GitHub\\primeiro-projeto-integrador\\projeto\\Artes_da_lineh final\\Artes_da_lineh final.csproj",
         "packagesPath": "C:\\Users\\Casa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Casa\\OneDrive\\Documents\\curso senac\\projeto 2\\Artes_da_lineh final\\obj\\",
+        "outputPath": "C:\\Users\\Casa\\OneDrive\\Documents\\GitHub\\primeiro-projeto-integrador\\projeto\\Artes_da_lineh final\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Casa\\AppData\\Roaming\\NuGet\\NuGet.Config"

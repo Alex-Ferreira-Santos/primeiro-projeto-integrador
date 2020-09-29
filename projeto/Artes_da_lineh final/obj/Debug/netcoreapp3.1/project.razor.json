@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\curso senac\\projeto 2\\Artes_da_lineh final\\Artes_da_lineh final.csproj",
+  "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\GitHub\\primeiro-projeto-integrador\\projeto\\Artes_da_lineh final\\Artes_da_lineh final.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "3.0",
@@ -14392,148 +14392,153 @@
   "RootNamespace": "Artes_da_lineh_final",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\curso senac\\projeto 2\\Artes_da_lineh final\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\curso senac\\projeto 2\\Artes_da_lineh final\\Views\\Shared\\_Produtos.cshtml",
-      "TargetPath": "Views\\Shared\\_Produtos.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\curso senac\\projeto 2\\Artes_da_lineh final\\Views\\Usuario\\Conta.cshtml",
-      "TargetPath": "Views\\Usuario\\Conta.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\curso senac\\projeto 2\\Artes_da_lineh final\\Views\\Pedido\\Excluir.cshtml",
-      "TargetPath": "Views\\Pedido\\Excluir.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\curso senac\\projeto 2\\Artes_da_lineh final\\Views\\Shared\\_Layout.cshtml",
-      "TargetPath": "Views\\Shared\\_Layout.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\curso senac\\projeto 2\\Artes_da_lineh final\\Views\\Desenho\\Inserir.cshtml",
-      "TargetPath": "Views\\Desenho\\Inserir.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\curso senac\\projeto 2\\Artes_da_lineh final\\Views\\Pedido\\Encomendas.cshtml",
-      "TargetPath": "Views\\Pedido\\Encomendas.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\curso senac\\projeto 2\\Artes_da_lineh final\\Views\\Usuario\\Login.cshtml",
-      "TargetPath": "Views\\Usuario\\Login.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\curso senac\\projeto 2\\Artes_da_lineh final\\Views\\Home\\FaleConosco.cshtml",
-      "TargetPath": "Views\\Home\\FaleConosco.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\curso senac\\projeto 2\\Artes_da_lineh final\\Views\\Produtos\\Inserir.cshtml",
-      "TargetPath": "Views\\Produtos\\Inserir.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\curso senac\\projeto 2\\Artes_da_lineh final\\Views\\Pedido\\Visualizar.cshtml",
-      "TargetPath": "Views\\Pedido\\Visualizar.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\curso senac\\projeto 2\\Artes_da_lineh final\\Views\\Pedido\\Uvisualizar.cshtml",
+      "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\GitHub\\primeiro-projeto-integrador\\projeto\\Artes_da_lineh final\\Views\\Pedido\\Uvisualizar.cshtml",
       "TargetPath": "Views\\Pedido\\Uvisualizar.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\curso senac\\projeto 2\\Artes_da_lineh final\\Views\\Desenho\\Modificar.cshtml",
-      "TargetPath": "Views\\Desenho\\Modificar.cshtml",
+      "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\GitHub\\primeiro-projeto-integrador\\projeto\\Artes_da_lineh final\\Views\\Usuario\\Listagem.cshtml",
+      "TargetPath": "Views\\Usuario\\Listagem.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\curso senac\\projeto 2\\Artes_da_lineh final\\Views\\Produtos\\Product.cshtml",
-      "TargetPath": "Views\\Produtos\\Product.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\curso senac\\projeto 2\\Artes_da_lineh final\\Views\\Desenho\\Excluir.cshtml",
+      "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\GitHub\\primeiro-projeto-integrador\\projeto\\Artes_da_lineh final\\Views\\Desenho\\Excluir.cshtml",
       "TargetPath": "Views\\Desenho\\Excluir.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\curso senac\\projeto 2\\Artes_da_lineh final\\Views\\Produtos\\Produtos.cshtml",
-      "TargetPath": "Views\\Produtos\\Produtos.cshtml",
+      "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\GitHub\\primeiro-projeto-integrador\\projeto\\Artes_da_lineh final\\Views\\Shared\\_Layout.cshtml",
+      "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\curso senac\\projeto 2\\Artes_da_lineh final\\Views\\Usuario\\Modificar.cshtml",
-      "TargetPath": "Views\\Usuario\\Modificar.cshtml",
+      "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\GitHub\\primeiro-projeto-integrador\\projeto\\Artes_da_lineh final\\Views\\Desenho\\Inserir.cshtml",
+      "TargetPath": "Views\\Desenho\\Inserir.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\curso senac\\projeto 2\\Artes_da_lineh final\\Views\\Shared\\_Desenhos.cshtml",
-      "TargetPath": "Views\\Shared\\_Desenhos.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\curso senac\\projeto 2\\Artes_da_lineh final\\Views\\Produtos\\Excluir.cshtml",
-      "TargetPath": "Views\\Produtos\\Excluir.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\curso senac\\projeto 2\\Artes_da_lineh final\\Views\\Home\\Index.cshtml",
-      "TargetPath": "Views\\Home\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\curso senac\\projeto 2\\Artes_da_lineh final\\Views\\Produtos\\Modificar.cshtml",
-      "TargetPath": "Views\\Produtos\\Modificar.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\curso senac\\projeto 2\\Artes_da_lineh final\\Views\\Usuario\\Excluir.cshtml",
-      "TargetPath": "Views\\Usuario\\Excluir.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\curso senac\\projeto 2\\Artes_da_lineh final\\Views\\_ViewStart.cshtml",
-      "TargetPath": "Views\\_ViewStart.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\curso senac\\projeto 2\\Artes_da_lineh final\\Views\\Desenho\\Desenhos.cshtml",
+      "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\GitHub\\primeiro-projeto-integrador\\projeto\\Artes_da_lineh final\\Views\\Desenho\\Desenhos.cshtml",
       "TargetPath": "Views\\Desenho\\Desenhos.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\curso senac\\projeto 2\\Artes_da_lineh final\\Views\\_ViewImports.cshtml",
-      "TargetPath": "Views\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\curso senac\\projeto 2\\Artes_da_lineh final\\Views\\Home\\Menu.cshtml",
+      "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\GitHub\\primeiro-projeto-integrador\\projeto\\Artes_da_lineh final\\Views\\Home\\Menu.cshtml",
       "TargetPath": "Views\\Home\\Menu.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\curso senac\\projeto 2\\Artes_da_lineh final\\Views\\Shared\\_Login.cshtml",
+      "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\GitHub\\primeiro-projeto-integrador\\projeto\\Artes_da_lineh final\\Views\\_ViewStart.cshtml",
+      "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\GitHub\\primeiro-projeto-integrador\\projeto\\Artes_da_lineh final\\Views\\Usuario\\Conta.cshtml",
+      "TargetPath": "Views\\Usuario\\Conta.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\GitHub\\primeiro-projeto-integrador\\projeto\\Artes_da_lineh final\\Views\\Usuario\\Modificar.cshtml",
+      "TargetPath": "Views\\Usuario\\Modificar.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\GitHub\\primeiro-projeto-integrador\\projeto\\Artes_da_lineh final\\Views\\Usuario\\Excluir.cshtml",
+      "TargetPath": "Views\\Usuario\\Excluir.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\GitHub\\primeiro-projeto-integrador\\projeto\\Artes_da_lineh final\\Views\\Home\\Index.cshtml",
+      "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\GitHub\\primeiro-projeto-integrador\\projeto\\Artes_da_lineh final\\Views\\Usuario\\Login.cshtml",
+      "TargetPath": "Views\\Usuario\\Login.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\GitHub\\primeiro-projeto-integrador\\projeto\\Artes_da_lineh final\\Views\\Pedido\\Modificar.cshtml",
+      "TargetPath": "Views\\Pedido\\Modificar.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\GitHub\\primeiro-projeto-integrador\\projeto\\Artes_da_lineh final\\Views\\Desenho\\Modificar.cshtml",
+      "TargetPath": "Views\\Desenho\\Modificar.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\GitHub\\primeiro-projeto-integrador\\projeto\\Artes_da_lineh final\\Views\\Produtos\\Produtos.cshtml",
+      "TargetPath": "Views\\Produtos\\Produtos.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\GitHub\\primeiro-projeto-integrador\\projeto\\Artes_da_lineh final\\Views\\Pedido\\Visualizar.cshtml",
+      "TargetPath": "Views\\Pedido\\Visualizar.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\GitHub\\primeiro-projeto-integrador\\projeto\\Artes_da_lineh final\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\GitHub\\primeiro-projeto-integrador\\projeto\\Artes_da_lineh final\\Views\\Shared\\_Desenhos.cshtml",
+      "TargetPath": "Views\\Shared\\_Desenhos.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\GitHub\\primeiro-projeto-integrador\\projeto\\Artes_da_lineh final\\Views\\Shared\\_Login.cshtml",
       "TargetPath": "Views\\Shared\\_Login.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\curso senac\\projeto 2\\Artes_da_lineh final\\Views\\Shared\\_Layout2.cshtml",
+      "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\GitHub\\primeiro-projeto-integrador\\projeto\\Artes_da_lineh final\\Views\\Produtos\\Modificar.cshtml",
+      "TargetPath": "Views\\Produtos\\Modificar.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\GitHub\\primeiro-projeto-integrador\\projeto\\Artes_da_lineh final\\Views\\Produtos\\Product.cshtml",
+      "TargetPath": "Views\\Produtos\\Product.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\GitHub\\primeiro-projeto-integrador\\projeto\\Artes_da_lineh final\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\GitHub\\primeiro-projeto-integrador\\projeto\\Artes_da_lineh final\\Views\\Home\\FaleConosco.cshtml",
+      "TargetPath": "Views\\Home\\FaleConosco.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\GitHub\\primeiro-projeto-integrador\\projeto\\Artes_da_lineh final\\Views\\Pedido\\Encomendas.cshtml",
+      "TargetPath": "Views\\Pedido\\Encomendas.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\GitHub\\primeiro-projeto-integrador\\projeto\\Artes_da_lineh final\\Views\\Shared\\_Layout2.cshtml",
       "TargetPath": "Views\\Shared\\_Layout2.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\curso senac\\projeto 2\\Artes_da_lineh final\\Views\\Pedido\\Modificar.cshtml",
-      "TargetPath": "Views\\Pedido\\Modificar.cshtml",
+      "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\GitHub\\primeiro-projeto-integrador\\projeto\\Artes_da_lineh final\\Views\\Produtos\\Excluir.cshtml",
+      "TargetPath": "Views\\Produtos\\Excluir.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\GitHub\\primeiro-projeto-integrador\\projeto\\Artes_da_lineh final\\Views\\Shared\\_Produtos.cshtml",
+      "TargetPath": "Views\\Shared\\_Produtos.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\GitHub\\primeiro-projeto-integrador\\projeto\\Artes_da_lineh final\\Views\\Produtos\\Inserir.cshtml",
+      "TargetPath": "Views\\Produtos\\Inserir.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Casa\\OneDrive\\Documents\\GitHub\\primeiro-projeto-integrador\\projeto\\Artes_da_lineh final\\Views\\Pedido\\Excluir.cshtml",
+      "TargetPath": "Views\\Pedido\\Excluir.cshtml",
       "FileKind": "mvc"
     }
   ],
