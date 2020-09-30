@@ -12,6 +12,7 @@ namespace Artes_da_lineh_final.Models
         public PedidoRepository pedidoRepository { get; set; }
         public Produto produto { get; set; }
         public List<Produto> listaProduto { get; set; }
+        public List<Produto> listaProduto1 { get; set; }
         public ProdutoRepository produtoRepository { get; set; }
         public Usuario usuario { get; set; }
         public List<Usuario> listaUsuario { get; set; }

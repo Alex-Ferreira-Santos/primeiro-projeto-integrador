@@ -122,6 +122,13 @@ namespace Artes_da_lineh_final.Controllers
             if(HttpContext.Session.GetInt32("idUsuarioUsuario")!=null){
                 viewModel.listaUsuario = viewModel.usuarioRepository.foto(HttpContext.Session.GetInt32("idUsuarioUsuario"));
             }
+            viewModel.listaProduto1 = viewModel.produtoRepository.select();
+            foreach (Produto item in viewModel.listaProduto1)
+            {
+                if(id>viewModel.listaProduto1.Count){
+                    return RedirectToAction("Produtos","Produtos");
+                }
+            }
             return View(viewModel);
         }
     }
