@@ -3,11 +3,13 @@
 <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
 @foreach (var item in Model.listaProduto)
 {
-    <div id="produto" class="text-center m-2">
-        <p id="img" style="background-image: url('../imagens/@item.imagem');" class="img-thumbnail rounded"></p>
-        <p id="nome" class="m-0">@item.nome</p>
-        <p id="preco" class="m-0">R$@item.preco</p>
-    </div>
+    <a href="/Produtos/Product?id=@item.id">
+        <div id="produto" class="text-center m-2">
+            <p id="img" style="background-image: url('../imagens/@item.imagem');" class="img-thumbnail rounded"></p>
+            <p id="nome" class="m-0">@item.nome</p>
+            <p id="preco" class="m-0">R$@item.preco</p>
+        </div>
+    </a>
 }
 
 

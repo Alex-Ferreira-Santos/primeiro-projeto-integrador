@@ -2,6 +2,9 @@
 <link rel="stylesheet" href="~/css/Produto/Product.css">
 <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
 
+@if(Model==null){
+    <h1>Produto não encontrado</h1>
+}else{
 <section class="table-info d-flex container p-1 mb-3">
     <div id="carrossel" class="carousel slide" data-ride="carousel">
 
@@ -82,3 +85,4 @@
         <button id="Encomendar" class="border-0 btn btn-primary">Encomendar</button>
     </div>
 </section>
+}

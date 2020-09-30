@@ -114,7 +114,7 @@ namespace Artes_da_lineh_final.Controllers
             return PartialView();
         }
 
-        public IActionResult Product(int id=1){
+        public IActionResult Product(int id){
             ViewModel viewModel = new ViewModel();
             viewModel.produtoRepository = new ProdutoRepository();
             viewModel.listaProduto = viewModel.produtoRepository.product(id);
