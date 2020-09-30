@@ -12,9 +12,10 @@ namespace Artes_da_lineh_final.Controllers
 {
     public class PedidoController : Controller
     {
-        public IActionResult Encomendas()
+        public IActionResult Encomendas(string nome="")
         {
             ViewModel viewModel = new ViewModel();
+            viewModel.nome = nome;
             viewModel.usuarioRepository = new UsuarioRepository();
             if(HttpContext.Session.GetInt32("idUsuarioUsuario")!=null){
                 viewModel.listaUsuario = viewModel.usuarioRepository.foto(HttpContext.Session.GetInt32("idUsuarioUsuario"));

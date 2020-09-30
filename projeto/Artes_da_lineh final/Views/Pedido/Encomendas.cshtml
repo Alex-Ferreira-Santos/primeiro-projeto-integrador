@@ -48,7 +48,7 @@
         <p><input asp-for="pedido.telefone" class="border-0" type="tel" id="telefone" placeholder="Coloque seu telefone aqui" required></p>
 
         <p><label asp-for="pedido.pedido">Pedido: </label></p>
-        <p><input asp-for="pedido.pedido" class="border-0" type="text" id="pedido" placeholder="Digite seu pedido" required></p>
+        <p><input asp-for="pedido.pedido" class="border-0" type="text" id="pedido" value="@Model.nome" placeholder="Digite seu pedido" required></p>
 
         <p><input type="submit" class="border-0 submit" value="Confirmar"></p>
         @if(ViewBag.mensagem!=null){<p id="visualizar"><button class="border-0" id="lista"><a asp-action="Visualizar" id="linkLista">Ver a lista de produtos</a></button></p>}

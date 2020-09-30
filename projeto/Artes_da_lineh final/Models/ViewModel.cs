@@ -18,5 +18,6 @@ namespace Artes_da_lineh_final.Models
         public List<Usuario> listaUsuario { get; set; }
         public UsuarioRepository usuarioRepository { get; set; }
         public Mensagem mensagem { get; set; }
+        public string nome { get; set; }
     }
 }
