@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.IO;
 using MySql.Data.MySqlClient;
+using System.Security.Cryptography;
 namespace Artes_da_lineh_final.Models
 {
     public class UsuarioRepository : Repository
@@ -10,6 +11,8 @@ namespace Artes_da_lineh_final.Models
             conexao.Open();
             string sql="INSERT INTO usuario(nomeUsuario, emailUsuario, senhaUsuario, idadeUsuario, avatarUsuario, tipoUsuario) values(@nome, @email, @senha, @idade, @avatar, @tipo)";
             MySqlCommand comando=new MySqlCommand(sql,conexao);
+            Criptografia criptografia = new Criptografia(SHA512.Create());
+            u.senha = criptografia.CriptografarSenha(u.senha);
             comando.Parameters.AddWithValue("@nome",u.nome);
             comando.Parameters.AddWithValue("@email",u.email);
             comando.Parameters.AddWithValue("@senha",u.senha);
@@ -78,6 +81,8 @@ namespace Artes_da_lineh_final.Models
             conexao.Open();
             string sql="SELECT * FROM usuario where emailUsuario=@email and senhaUsuario=@senha";
             MySqlCommand comando=new MySqlCommand(sql,conexao);
+            Criptografia criptografia = new Criptografia(SHA512.Create());
+            u.senha = criptografia.CriptografarSenha(u.senha);
             comando.Parameters.AddWithValue("@nome",u.nome);
             comando.Parameters.AddWithValue("@email",u.email);
             comando.Parameters.AddWithValue("@senha",u.senha);
@@ -105,6 +110,8 @@ namespace Artes_da_lineh_final.Models
             conexao.Open();
             string sql=$"UPDATE usuario SET nomeUsuario=@nome,emailUsuario=@email,avatarUsuario=@avatar,senhaUsuario=@senha,tipoUsuario=@tipo where idUsuario={id}";
             MySqlCommand comando=new MySqlCommand(sql,conexao);
+            Criptografia criptografia = new Criptografia(SHA512.Create());
+            u.senha = criptografia.CriptografarSenha(u.senha);
             comando.Parameters.AddWithValue("@nome",u.nome);
             comando.Parameters.AddWithValue("@email",u.email);
             comando.Parameters.AddWithValue("@avatar",u.avatar);
@@ -129,6 +136,8 @@ namespace Artes_da_lineh_final.Models
             conexao.Open();
             string sql=$"DELETE FROM usuario where idUsuario={id} and emailUsuario=@email and senhaUsuario=@senha";
             MySqlCommand comando=new MySqlCommand(sql,conexao);
+            Criptografia criptografia = new Criptografia(SHA512.Create());
+            u.senha = criptografia.CriptografarSenha(u.senha);
             comando.Parameters.AddWithValue("@email",u.email);
             comando.Parameters.AddWithValue("@senha",u.senha);
             comando.ExecuteNonQuery();

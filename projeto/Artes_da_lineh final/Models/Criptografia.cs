@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
-using Microsoft.EntityFrameworkCore;
 using MySql.Data.MySqlClient;
 
 namespace Artes_da_lineh_final.Models
