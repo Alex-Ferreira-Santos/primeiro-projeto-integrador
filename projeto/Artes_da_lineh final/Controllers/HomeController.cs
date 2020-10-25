@@ -27,10 +27,11 @@ namespace Artes_da_lineh_final.Controllers
                 viewModel.listaDesenhos = viewModel.desenhosRepository.main();
                 return View(viewModel);
             }
-            catch (System.Exception)
+            catch (Exception e)
             {
-                
-                throw;
+                ViewBag.mensagem = e.Message;
+                ViewBag.processo = "processo de listagem da página principal";
+                return View("Erro");
             }
         }
         public IActionResult FaleConosco()

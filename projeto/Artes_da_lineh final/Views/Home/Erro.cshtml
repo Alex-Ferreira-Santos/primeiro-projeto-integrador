@@ -1,5 +1,12 @@
 @{
     ViewData["title"] = "Erro";
 }
-
-<h1>Ops :(, Um erro ocorreu durante o @ViewBag.processo</h1>
+<style>
+    main{
+        min-height: 20em;
+    }
+</style>
+<h1>Ops :( , Um erro ocorreu durante o @ViewBag.processo</h1>
+<h4>Mensagem do erro</h4>
+<p>@ViewBag.mensagem</p>
+<h3>Por favor mande uma mensagem no fale conosco com a mensagem do erro e o processo para que nós possamos corrigir o erro</h3>

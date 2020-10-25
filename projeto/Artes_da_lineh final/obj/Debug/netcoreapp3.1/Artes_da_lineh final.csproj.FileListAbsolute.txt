@@ -231,3 +231,4 @@ C:\Users\Casa\OneDrive\Documents\GitHub\primeiro-projeto-integrador\projeto\Arte
 C:\Users\Casa\OneDrive\Documents\GitHub\primeiro-projeto-integrador\projeto\Artes_da_lineh final\obj\Debug\netcoreapp3.1\staticwebassets\Artes_da_lineh final.StaticWebAssets.Manifest.cache
 C:\Users\Casa\OneDrive\Documents\GitHub\primeiro-projeto-integrador\projeto\Artes_da_lineh final\obj\Debug\netcoreapp3.1\staticwebassets\Artes_da_lineh final.StaticWebAssets.xml
 C:\Users\Casa\OneDrive\Documents\GitHub\primeiro-projeto-integrador\projeto\Artes_da_lineh final\obj\Debug\netcoreapp3.1\Artes_da_lineh final.genruntimeconfig.cache
+C:\Users\Casa\OneDrive\Documents\GitHub\primeiro-projeto-integrador\projeto\Artes_da_lineh final\obj\Debug\netcoreapp3.1\Razor\Views\Home\Erro.cshtml.g.cs

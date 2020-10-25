@@ -20,20 +20,31 @@ namespace Artes_da_lineh_final.Controllers
         [HttpPost]
         public IActionResult Login(Usuario u)
         {
-            UsuarioRepository ur=new UsuarioRepository();
-            Usuario usuario=ur.login(u);
-            if(usuario!=null)
+            try
             {
-                HttpContext.Session.SetInt32("idUsuarioUsuario",usuario.id);
-                HttpContext.Session.SetString("nomeUsuarioUsuario",usuario.nome);
-                HttpContext.Session.SetInt32("tipoUsuarioUsuario",usuario.tipo);
-                return RedirectToAction("Index","Home");
+                UsuarioRepository ur=new UsuarioRepository();
+                Usuario usuario=ur.login(u);
+                if(usuario!=null)
+                {
+                    HttpContext.Session.SetInt32("idUsuarioUsuario",usuario.id);
+                    HttpContext.Session.SetString("nomeUsuarioUsuario",usuario.nome);
+                    HttpContext.Session.SetInt32("tipoUsuarioUsuario",usuario.tipo);
+                    return RedirectToAction("Index","Home");
+                }
+                else
+                {
+                    ViewBag.mensagem="Falha no login";
+                    return View();
+                }
             }
-            else
+            catch (Exception e)
             {
-                ViewBag.mensagem="Falha no login";
-                return View();
+                ViewBag.mensagem = e.Message;
+                ViewBag.processo = "processo de login de usuário";
+                ViewBag.local = e.TargetSite;
+                return View("../Home/Erro");
             }
+            
         }
         public IActionResult Logout()
         {
