@@ -36,33 +36,63 @@ namespace Artes_da_lineh_final.Controllers
         }
         public IActionResult FaleConosco()
         {
-            ViewModel viewModel = new ViewModel();
-            viewModel.usuarioRepository = new UsuarioRepository();
-            if(HttpContext.Session.GetInt32("idUsuarioUsuario")!=null){
-                viewModel.listaUsuario = viewModel.usuarioRepository.foto(HttpContext.Session.GetInt32("idUsuarioUsuario"));
+            try
+            {
+                ViewModel viewModel = new ViewModel();
+                viewModel.usuarioRepository = new UsuarioRepository();
+                if(HttpContext.Session.GetInt32("idUsuarioUsuario")!=null){
+                    viewModel.listaUsuario = viewModel.usuarioRepository.foto(HttpContext.Session.GetInt32("idUsuarioUsuario"));
+                }
+                return View(viewModel);
             }
-            return View(viewModel);
+            catch (Exception e)
+            {
+                ViewBag.mensagem = e.Message;
+                ViewBag.processo = "processo de carregamento da pagina de fale conosco";
+                return View("Erro");
+            }
+            
         }
         [HttpPost]
         public IActionResult FaleConosco(Mensagem m)
         {
-            ViewModel viewModel = new ViewModel();
-            viewModel.usuarioRepository = new UsuarioRepository();
-            if(HttpContext.Session.GetInt32("idUsuarioUsuario")!=null){
-                viewModel.listaUsuario = viewModel.usuarioRepository.foto(HttpContext.Session.GetInt32("idUsuarioUsuario"));
+            try
+            {
+                ViewModel viewModel = new ViewModel();
+                viewModel.usuarioRepository = new UsuarioRepository();
+                if(HttpContext.Session.GetInt32("idUsuarioUsuario")!=null){
+                    viewModel.listaUsuario = viewModel.usuarioRepository.foto(HttpContext.Session.GetInt32("idUsuarioUsuario"));
+                }
+                return View(viewModel);   
             }
-            return View(viewModel);
+            catch (Exception e)
+            {
+                ViewBag.mensagem = e.Message;
+                ViewBag.processo = "processo de cadastro de comentarios";
+                return View("Erro");
+            }
+            
         }
         public IActionResult Menu()
         {
-            if(HttpContext.Session.GetInt32("idUsuarioUsuario")==null)
+            try
             {
-                return RedirectToAction("Login","Usuario");
+                if(HttpContext.Session.GetInt32("idUsuarioUsuario")==null)
+                {
+                    return RedirectToAction("Login","Usuario");
+                }
+                else
+                {
+                    return View();
+                }
             }
-            else
+            catch (Exception e)
             {
-                return View();
+                ViewBag.mensagem = e.Message;
+                ViewBag.processo = "processo de carregamento do menu";
+                return View("Erro");   
             }
+            
         }
     }
 }

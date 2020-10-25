@@ -41,15 +41,24 @@ namespace Artes_da_lineh_final.Controllers
             {
                 ViewBag.mensagem = e.Message;
                 ViewBag.processo = "processo de login de usuário";
-                ViewBag.local = e.TargetSite;
                 return View("../Home/Erro");
             }
             
         }
         public IActionResult Logout()
         {
-            HttpContext.Session.Clear();
-            return RedirectToAction("Index","Home");
+            try
+            {
+                HttpContext.Session.Clear();
+                return RedirectToAction("Index","Home");
+            }
+            catch (Exception e)
+            {
+                ViewBag.mensagem = e.Message;
+                ViewBag.processo = "processo de logout de usuário";
+                return View("../Home/Erro");
+            }
+            
         }
         public IActionResult Conta()
         {
@@ -58,13 +67,23 @@ namespace Artes_da_lineh_final.Controllers
         [HttpPost]
         public IActionResult Conta(Usuario u)
         {
-            UsuarioRepository ur=new UsuarioRepository();
-            u.tipo=0;
-            if(u.avatar==null){
-                u.avatar="/imagens/user1.png";
+            try
+            {
+                UsuarioRepository ur=new UsuarioRepository();
+                u.tipo=0;
+                if(u.avatar==null){
+                    u.avatar="/imagens/user1.png";
+                }
+                ur.insert(u);
+                return RedirectToAction("Login","Usuario");
             }
-            ur.insert(u);
-            return RedirectToAction("Login","Usuario");
+            catch (Exception e)
+            {
+                ViewBag.mensagem = e.Message;
+                ViewBag.processo = "processo de criação de usuário";
+                return View("../Home/Erro");
+            }
+            
         }
         public IActionResult Modificar()
         {
@@ -80,19 +99,29 @@ namespace Artes_da_lineh_final.Controllers
         [HttpPost]
         public IActionResult Modificar(Usuario u)
         {
-            if(HttpContext.Session.GetInt32("idUsuarioUsuario")==null)
+            try
             {
-                return RedirectToAction("Login","Usuario");
-            }
-            UsuarioRepository ur = new UsuarioRepository();
+                if(HttpContext.Session.GetInt32("idUsuarioUsuario")==null)
+                {
+                    return RedirectToAction("Login","Usuario");
+                }
+                UsuarioRepository ur = new UsuarioRepository();
 
-            if(HttpContext.Session.GetInt32("tipoUsuarioUsuario")==0){
-                ur.updateU(u,HttpContext.Session.GetInt32("idUsuarioUsuario"));
+                if(HttpContext.Session.GetInt32("tipoUsuarioUsuario")==0){
+                    ur.updateU(u,HttpContext.Session.GetInt32("idUsuarioUsuario"));
+                }
+                if(HttpContext.Session.GetInt32("tipoUsuarioUsuario")==1){
+                    ur.updateA(u);
+                }
+                return RedirectToAction("Menu","Home");
             }
-            if(HttpContext.Session.GetInt32("tipoUsuarioUsuario")==1){
-                ur.updateA(u);
+            catch (Exception e)
+            {  
+                ViewBag.mensagem = e.Message;
+                ViewBag.processo = "processo de edição de usuário";
+                return View("../Home/Erro");
             }
-            return RedirectToAction("Menu","Home");
+            
         }
         public IActionResult Excluir()
         {
@@ -115,13 +144,22 @@ namespace Artes_da_lineh_final.Controllers
         [HttpPost]
         public IActionResult Excluir(Usuario u)
         {
-            if(HttpContext.Session.GetInt32("idUsuarioUsuario")==null)
+            try
             {
-                return RedirectToAction("Login","Usuario");
+                if(HttpContext.Session.GetInt32("idUsuarioUsuario")==null)
+                {
+                    return RedirectToAction("Login","Usuario");
+                }
+                UsuarioRepository ur = new UsuarioRepository();
+                ur.delete(u,HttpContext.Session.GetInt32("idUsuarioUsuario"));
+                return RedirectToAction("Menu","Home");
             }
-            UsuarioRepository ur =new UsuarioRepository();
-            ur.delete(u,HttpContext.Session.GetInt32("idUsuarioUsuario"));
-            return RedirectToAction("Menu","Home");
+            catch (Exception e)
+            {
+                ViewBag.mensagem = e.Message;
+                ViewBag.processo = "processo de exclusão de usuário";
+                return View("../Home/Erro"); 
+            }
         }
     }
 }
