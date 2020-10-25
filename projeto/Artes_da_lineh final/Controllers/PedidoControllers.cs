@@ -14,59 +14,97 @@ namespace Artes_da_lineh_final.Controllers
     {
         public IActionResult Encomendas(string nome="")
         {
-            ViewModel viewModel = new ViewModel();
-            viewModel.nome = nome;
-            viewModel.usuarioRepository = new UsuarioRepository();
-            if(HttpContext.Session.GetInt32("idUsuarioUsuario")!=null){
-                viewModel.listaUsuario = viewModel.usuarioRepository.foto(HttpContext.Session.GetInt32("idUsuarioUsuario"));
+            try
+            {
+                ViewModel viewModel = new ViewModel();
+                viewModel.nome = nome;
+                viewModel.usuarioRepository = new UsuarioRepository();
+                if(HttpContext.Session.GetInt32("idUsuarioUsuario")!=null){
+                    viewModel.listaUsuario = viewModel.usuarioRepository.foto(HttpContext.Session.GetInt32("idUsuarioUsuario"));
+                }
+                return View(viewModel);
             }
-            return View(viewModel);
+            catch (Exception e)
+            { 
+                ViewBag.mensagem = e.Message;
+                ViewBag.processo = "processo de carregamento da pagina de encomendas";
+                return View("../Home/Erro");  
+            }
+            
         }
         [HttpPost]
         public IActionResult Encomendas(ViewModel p)
         {
-            if(HttpContext.Session.GetInt32("idUsuarioUsuario")==null)
+            try
             {
-                return RedirectToAction("Login","Usuario");
+                if(HttpContext.Session.GetInt32("idUsuarioUsuario")==null)
+                {
+                    return RedirectToAction("Login","Usuario");
+                }
+                ViewModel viewModel = new ViewModel();
+                viewModel.pedidoRepository = new PedidoRepository();
+                p.pedido.dataPedido = DateTime.Now;
+                p.pedido.usuario = HttpContext.Session.GetString("nomeUsuarioUsuario");
+                viewModel.pedidoRepository.insert(p.pedido);
+                ViewBag.mensagem=$"Pedido {p.pedido} realizado com sucesso";
+                viewModel.usuarioRepository = new UsuarioRepository();
+                if(HttpContext.Session.GetInt32("idUsuarioUsuario")!=null){
+                    viewModel.listaUsuario = viewModel.usuarioRepository.foto(HttpContext.Session.GetInt32("idUsuarioUsuario"));
+                }
+                return View(viewModel);
             }
-            ViewModel viewModel = new ViewModel();
-            viewModel.pedidoRepository = new PedidoRepository();
-            p.pedido.dataPedido = DateTime.Now;
-            p.pedido.usuario = HttpContext.Session.GetString("nomeUsuarioUsuario");
-            viewModel.pedidoRepository.insert(p.pedido);
-            ViewBag.mensagem=$"Pedido {p.pedido} realizado com sucesso";
-            viewModel.usuarioRepository = new UsuarioRepository();
-            if(HttpContext.Session.GetInt32("idUsuarioUsuario")!=null){
-                viewModel.listaUsuario = viewModel.usuarioRepository.foto(HttpContext.Session.GetInt32("idUsuarioUsuario"));
+            catch (Exception e)
+            {
+                ViewBag.mensagem = e.Message;
+                ViewBag.processo = "processo de criação de encomendas";
+                return View("../Home/Erro");  
             }
-            return View(viewModel);
+            
         }
         public IActionResult Visualizar()
         {
-            if(HttpContext.Session.GetInt32("idUsuarioUsuario")==null)
+            try
             {
-                return RedirectToAction("Login","Usuario");
+                if(HttpContext.Session.GetInt32("idUsuarioUsuario")==null)
+                {
+                    return RedirectToAction("Login","Usuario");
+                }
+                PedidoRepository pr =new PedidoRepository();
+                Pedido p=new Pedido();
+                List<Pedido> lista=pr.select(p);
+                return View(lista);
             }
-            PedidoRepository pr =new PedidoRepository();
-            Pedido p=new Pedido();
-            List<Pedido> lista=pr.select(p);
-            return View(lista);
+            catch (Exception e)
+            {
+                ViewBag.mensagem = e.Message;
+                ViewBag.processo = "processo de visualização de encomendas";
+                return View("../Home/Erro");  
+            }
         }
         public IActionResult Uvisualizar()
         {
-            if(HttpContext.Session.GetInt32("idUsuarioUsuario")==null)
+            try
             {
-                return RedirectToAction("Login","Usuario");
-            }else{
-                if(HttpContext.Session.GetInt32("tipoUsuarioUsuario")==0){
-                    PedidoRepository pr =new PedidoRepository();
-                    Pedido p = new Pedido();
-                    p.usuario=HttpContext.Session.GetString("nomeUsuarioUsuario");
-                    List<Pedido> lista=pr.select(p);
-                    return View(lista);
+                if(HttpContext.Session.GetInt32("idUsuarioUsuario")==null)
+                {
+                    return RedirectToAction("Login","Usuario");
                 }else{
-                    return RedirectToAction("Index","Home");
+                    if(HttpContext.Session.GetInt32("tipoUsuarioUsuario")==0){
+                        PedidoRepository pr =new PedidoRepository();
+                        Pedido p = new Pedido();
+                        p.usuario=HttpContext.Session.GetString("nomeUsuarioUsuario");
+                        List<Pedido> lista=pr.selectU(p);
+                        return View(lista);
+                    }else{
+                        return RedirectToAction("Index","Home");
+                    }
                 }
+            }
+            catch (Exception e)
+            {
+                ViewBag.mensagem = e.Message;
+                ViewBag.processo = "processo de visualização de encomendas";
+                return View("../Home/Erro");       
             }
             
         }
@@ -81,16 +119,26 @@ namespace Artes_da_lineh_final.Controllers
         [HttpPost]
         public IActionResult Modificar(Pedido p)
         {
-            if(HttpContext.Session.GetInt32("idUsuarioUsuario")==null)
+            try
             {
-                return RedirectToAction("Login","Usuario");
+                if(HttpContext.Session.GetInt32("idUsuarioUsuario")==null)
+                {
+                    return RedirectToAction("Login","Usuario");
+                }
+                PedidoRepository pr =new PedidoRepository();
+                p.usuario=HttpContext.Session.GetString("nomeUsuarioUsuario");
+                p.dataPedido=DateTime.Now;
+                pr.update(p);
+                ViewBag.mensagem=$"Pedido {p.pedido} modificado com sucesso";
+                return View();
             }
-            PedidoRepository pr =new PedidoRepository();
-            p.usuario=HttpContext.Session.GetString("nomeUsuarioUsuario");
-            p.dataPedido=DateTime.Now;
-            pr.update(p);
-            ViewBag.mensagem=$"Pedido {p.pedido} modificado com sucesso";
-            return View();
+            catch (Exception e)
+            {
+                ViewBag.mensagem = e.Message;
+                ViewBag.processo = "processo de edição de encomendas";
+                return View("../Home/Erro");   
+            }
+            
         }
         public IActionResult Excluir()
         {
@@ -103,14 +151,24 @@ namespace Artes_da_lineh_final.Controllers
         [HttpPost]
         public IActionResult Excluir(Pedido p)
         {
-            if(HttpContext.Session.GetInt32("idUsuarioUsuario")==null)
+            try
             {
-                return RedirectToAction("Login","Usuario");
+                if(HttpContext.Session.GetInt32("idUsuarioUsuario")==null)
+                {
+                    return RedirectToAction("Login","Usuario");
+                }
+                PedidoRepository pr =new PedidoRepository();
+                ViewBag.mensagem=$"Pedido {p.pedido} excluido com sucesso";
+                pr.delete(p);
+                return View();
             }
-            PedidoRepository pr =new PedidoRepository();
-            ViewBag.mensagem=$"Pedido {p.pedido} excluido com sucesso";
-            pr.delete(p);
-            return View();
+            catch (Exception e)
+            {             
+                ViewBag.mensagem = e.Message;
+                ViewBag.processo = "processo de exclusão de encomendas";
+                return View("../Home/Erro");  
+            }
+            
         }
     }
 }
