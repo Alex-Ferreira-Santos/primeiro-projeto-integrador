@@ -14,14 +14,23 @@ namespace Artes_da_lineh_final.Controllers
     {
         public IActionResult Desenhos()
         {
-            ViewModel viewModel = new ViewModel();
-            viewModel.desenhosRepository = new DesenhosRepository();
-            viewModel.listaDesenhos = viewModel.desenhosRepository.select();
-            viewModel.usuarioRepository = new UsuarioRepository();
-            if(HttpContext.Session.GetInt32("idUsuarioUsuario")!=null){
-                viewModel.listaUsuario = viewModel.usuarioRepository.foto(HttpContext.Session.GetInt32("idUsuarioUsuario"));
+            try
+            {
+                ViewModel viewModel = new ViewModel();
+                viewModel.desenhosRepository = new DesenhosRepository();
+                viewModel.listaDesenhos = viewModel.desenhosRepository.select();
+                viewModel.usuarioRepository = new UsuarioRepository();
+                if(HttpContext.Session.GetInt32("idUsuarioUsuario")!=null){
+                    viewModel.listaUsuario = viewModel.usuarioRepository.foto(HttpContext.Session.GetInt32("idUsuarioUsuario"));
+                }
+                return View(viewModel);
             }
-            return View(viewModel);
+            catch (Exception e)
+            {
+                ViewBag.mensagem = e.Message;
+                ViewBag.processo = "processo de listagem dos desenhos";
+                return View("../Home/Erro"); 
+            }
         }
         public IActionResult Inserir()
         {
@@ -44,13 +53,22 @@ namespace Artes_da_lineh_final.Controllers
         [HttpPost]
         public IActionResult Inserir(Desenhos d)
         {
-            if(HttpContext.Session.GetInt32("idUsuarioUsuario")==null)
+            try
             {
-                return RedirectToAction("Login","Usuario");
+                if(HttpContext.Session.GetInt32("idUsuarioUsuario")==null)
+                {
+                    return RedirectToAction("Login","Usuario");
+                }
+                DesenhosRepository pr = new DesenhosRepository();
+                pr.insert(d);
+                return RedirectToAction("Menu","Home");
+                }
+            catch (Exception e)
+            {
+                ViewBag.mensagem = e.Message;
+                ViewBag.processo = "processo de inserção dos desenhos";
+                return View("../Home/Erro"); 
             }
-            DesenhosRepository pr = new DesenhosRepository();
-            pr.insert(d);
-            return RedirectToAction("Menu","Home");
         }
         public IActionResult Modificar()
         {
@@ -73,14 +91,24 @@ namespace Artes_da_lineh_final.Controllers
         [HttpPost]
         public IActionResult Modificar(Desenhos d)
         {
-            if(HttpContext.Session.GetInt32("idUsuarioUsuario")==null)
+            try
             {
-                return RedirectToAction("Login","Usuario");
+                if(HttpContext.Session.GetInt32("idUsuarioUsuario")==null)
+                {
+                    return RedirectToAction("Login","Usuario");
+                }
+                DesenhosRepository pr =new DesenhosRepository();
+                pr.update(d);
+                ViewBag.mensagem=$"Desenho {d.imagem} modificado com sucesso";
+                return RedirectToAction("Menu","Home");
+                }
+            catch (Exception e)
+            {
+                ViewBag.mensagem = e.Message;
+                ViewBag.processo = "processo de edição dos desenhos";
+                return View("../Home/Erro"); 
             }
-            DesenhosRepository pr =new DesenhosRepository();
-            pr.update(d);
-            ViewBag.mensagem=$"Desenho {d.imagem} modificado com sucesso";
-            return RedirectToAction("Menu","Home");
+            
         }
         public IActionResult Excluir()
         {
@@ -103,20 +131,25 @@ namespace Artes_da_lineh_final.Controllers
         [HttpPost]
         public IActionResult Excluir(Desenhos d)
         {
-            if(HttpContext.Session.GetInt32("idUsuarioUsuario")==null)
+            try
             {
-                return RedirectToAction("Login","Usuario");
+                if(HttpContext.Session.GetInt32("idUsuarioUsuario")==null)
+                {
+                    return RedirectToAction("Login","Usuario");
+                }
+                DesenhosRepository pr =new DesenhosRepository();
+                ViewBag.mensagem=$"Produto {d.imagem} excluido com sucesso";
+                pr.delete(d);
+                return RedirectToAction("Menu","Home");
+                }
+            catch (Exception e)
+            {
+                ViewBag.mensagem = e.Message;
+                ViewBag.processo = "processo de exlcusão dos desenhos";
+                return View("../Home/Erro"); 
             }
-            DesenhosRepository pr =new DesenhosRepository();
-            ViewBag.mensagem=$"Produto {d.imagem} excluido com sucesso";
-            //pr.delete(d);
-            return RedirectToAction("Menu","Home");
+            
         }
-        public IActionResult _Desenhos(){
-            ViewModel viewModel = new ViewModel();
-            viewModel.desenhosRepository = new DesenhosRepository();
-            viewModel.listaDesenhos = viewModel.desenhosRepository.main();
-            return PartialView(viewModel);
-        }
+        
     }
 }
