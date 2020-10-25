@@ -14,16 +14,24 @@ namespace Artes_da_lineh_final.Controllers
     {
         public IActionResult Index()
         {
-            ViewModel viewModel = new ViewModel();
-            viewModel.produtoRepository = new ProdutoRepository();
-            viewModel.desenhosRepository = new DesenhosRepository();
-            viewModel.usuarioRepository = new UsuarioRepository();
-            if(HttpContext.Session.GetInt32("idUsuarioUsuario")!=null){
-                viewModel.listaUsuario = viewModel.usuarioRepository.foto(HttpContext.Session.GetInt32("idUsuarioUsuario"));
+            try
+            {
+                ViewModel viewModel = new ViewModel();
+                viewModel.produtoRepository = new ProdutoRepository();
+                viewModel.desenhosRepository = new DesenhosRepository();
+                viewModel.usuarioRepository = new UsuarioRepository();
+                if(HttpContext.Session.GetInt32("idUsuarioUsuario")!=null){
+                    viewModel.listaUsuario = viewModel.usuarioRepository.foto(HttpContext.Session.GetInt32("idUsuarioUsuario"));
+                }
+                viewModel.listaProduto = viewModel.produtoRepository.main();
+                viewModel.listaDesenhos = viewModel.desenhosRepository.main();
+                return View(viewModel);
             }
-            viewModel.listaProduto = viewModel.produtoRepository.main();
-            viewModel.listaDesenhos = viewModel.desenhosRepository.main();
-            return View(viewModel);
+            catch (System.Exception)
+            {
+                
+                throw;
+            }
         }
         public IActionResult FaleConosco()
         {

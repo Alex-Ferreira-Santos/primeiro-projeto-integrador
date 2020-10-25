@@ -36,7 +36,7 @@ namespace Artes_da_lineh_final
             }
             else
             {
-                app.UseExceptionHandler("/Home/Error");
+                app.UseExceptionHandler("/Home/Erro");
             }
             app.UseStaticFiles();
 
