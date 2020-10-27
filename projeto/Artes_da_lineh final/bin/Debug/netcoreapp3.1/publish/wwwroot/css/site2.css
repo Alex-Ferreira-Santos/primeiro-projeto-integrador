@@ -1,0 +1,130 @@
+﻿*{
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  background-color: #ffffe0 !important;
+}
+header{
+  height: 13em;
+  background-color: rgb(214, 255, 239);
+  margin-bottom: 1em;
+}
+#logo{
+  width: 100%;
+  height: 17.5em;
+  position: relative;
+  bottom: 100px;
+}
+#logout{
+  position: absolute;
+  width: 9vw;
+  height: 9vw;
+  top: 12vw;
+}
+.user{
+  position: absolute;
+  right: 0;
+  width: 10vw;
+  top: 0.5em;
+  height: 10vw;
+}
+nav{
+  text-align: center;
+  position: relative;
+  bottom: 140px;
+}
+nav a{
+  margin-left: 0.5em;
+  transition: 0.2s ease-in;
+}
+nav a:hover{
+  font-size: 1.2em;
+}
+#nomeUser{
+  position: relative;
+  bottom: 8em;
+}
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffffe0;
+}
+footer{
+  background-color: rgb(214, 255, 239);
+}
+#social-media,#copyrights{
+  text-align: center;
+}
+#social-media a{
+  margin-left: 1em;
+}
+
+#social-media label{
+  cursor: pointer;
+  width: 4em;
+  height: 4em;
+  margin-bottom: 0;
+}
+#facebook{
+  background-image: url("../imagens/00-facebook.png");
+  background-size: 4em;
+  transition: 0.4s;
+}
+#facebook:hover{
+  background-image: url("../imagens/facebook.png");
+}
+#instagram{
+  background-image: url("../imagens/011-instagram.png");
+  background-size: 4em;
+  transition: 0.2s;
+}
+#instagram:hover{
+  background-image: url("../imagens/01-instagram.png");
+}
+#pinterest{
+  background-image: url("../imagens/pinterest2.png");
+  background-size: 4em;
+  transition: 0.2s;
+}
+#pinterest:hover{
+  background-image: url("../imagens/pinterest.png");
+}
+h3{
+  text-align: center;
+  display: block;
+}
+@media(min-width:700px){
+  #logo{
+    width: 75%;
+  }
+  #logout{
+    top: 1em;
+    right: 5.5em;
+    width: 4em;
+    height: 4em;
+  }
+}
+@media(min-width:990px){
+  #logo{
+    width: 50%;
+  }
+  nav a{
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+  footer{
+    display: flex !important;
+    align-items:center;
+  }
+  #social-media{
+    width: 20em;
+  }
+  #copyright{
+    position: relative;
+    margin-right: 10vw;
+  }
+  .user{
+    width: 5em;
+    height: 5em;
+  }
+}
+

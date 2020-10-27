@@ -1,0 +1,26 @@
+#carrossel{
+    width: 100%;
+}
+#preco{
+    font-size: 1.5em;
+    color: green;
+}
+button{
+    width: 60%;
+    border-radius: 15px !important;
+}
+@media(min-width:800px){
+    #carrossel{
+        width: 50%;
+    }
+    #descricao{
+        margin-left: 4em;
+    }
+    button{
+        height: 4em;
+        font-size: 1.5em !important;
+    }
+    #preco{
+        font-size: 2em;
+    }
+}

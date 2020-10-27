@@ -1,0 +1,57 @@
+form{
+    background-color: rgba(210, 105, 30, 0.281);
+    border-radius: 15px;
+}
+p{
+    margin: 0;
+}
+input{
+    outline: none;
+    text-align-last: center;
+    border: 0;
+    border-radius: 15px;
+    width: 60vw;
+    margin-bottom: 0.5em;
+}
+#imagem{
+    width: 50vw;
+    height: 50vw;
+}
+#cancelar,#concluir{
+    margin-top: 1em;
+    width: 35vw;
+}
+#cancelar{
+    background-color: rgb(221, 1, 1);
+    transition: 0.2s;
+    color: white;
+    margin-right: 0.25em;
+}
+#cancelar:hover{
+    background-color: rgb(189, 1, 1);
+}
+#concluir{
+    color: white;
+    background-color: green;
+    transition: 0.2s;
+}
+#concluir:hover{
+    background-color: rgb(0, 97, 0);
+}
+@media(min-width:990px){
+    #imagem{
+        width: 30vw;
+        height: 30vw;
+    }
+    form{
+        width: 50vw;
+        margin: auto;
+        margin-bottom: 1em;
+    }
+    #cancelar,#concluir{
+        width: 20vw;
+    }
+    input{
+        width: 40vw;
+    }
+}

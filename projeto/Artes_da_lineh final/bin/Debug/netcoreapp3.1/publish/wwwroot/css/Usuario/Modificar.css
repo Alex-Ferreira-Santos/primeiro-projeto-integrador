@@ -1,0 +1,16 @@
+#cancelar{
+    color: white;
+    background-color: rgba(255, 0, 0, 0.800);
+    transition: 0.2s;
+}
+#cancelar:hover{
+    background-color: rgb(209, 0, 0);
+}
+#modificar{
+    color: white;
+    background-color: sandybrown;
+    transition: 0.2s;
+}
+#modificar:hover{
+    background-color: rgb(212, 143, 82);
+}

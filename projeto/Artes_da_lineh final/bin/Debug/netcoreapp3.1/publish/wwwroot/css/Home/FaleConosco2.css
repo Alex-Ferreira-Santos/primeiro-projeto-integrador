@@ -1,0 +1,38 @@
+#faleConosco{
+    display: none;
+}
+fieldset{
+    margin: 1em 0;
+    padding: 1em 0;
+    background-color: #FFC8C7;
+}
+p{
+    margin: 0;
+}
+input,textarea{
+    text-align-last: center;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    margin: 0.5em 0;
+    width: 60vw;
+    transition: 0.2s;
+}
+#submit{
+    background-color: rgb(0, 165, 0);
+    transition: 0.2s;
+}
+#submit:hover{
+    color: white;
+    background-color: green;
+}
+@media(min-width:990px){
+    fieldset{
+        width: 50vw;
+        margin: auto;
+        margin-bottom: 1em;
+    }
+    input,textarea{
+        width: 40vw;
+    }
+}
