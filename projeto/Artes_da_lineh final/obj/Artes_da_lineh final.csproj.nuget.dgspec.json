@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Casa\\OneDrive\\Documents\\GitHub\\primeiro-projeto-integrador\\projeto\\Artes_da_lineh final\\Artes_da_lineh final.csproj": {}
+    "C:\\Users\\W10\\Documents\\GitHub\\primeiro-projeto-integrador\\projeto\\Artes_da_lineh final\\Artes_da_lineh final.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Casa\\OneDrive\\Documents\\GitHub\\primeiro-projeto-integrador\\projeto\\Artes_da_lineh final\\Artes_da_lineh final.csproj": {
+    "C:\\Users\\W10\\Documents\\GitHub\\primeiro-projeto-integrador\\projeto\\Artes_da_lineh final\\Artes_da_lineh final.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Casa\\OneDrive\\Documents\\GitHub\\primeiro-projeto-integrador\\projeto\\Artes_da_lineh final\\Artes_da_lineh final.csproj",
+        "projectUniqueName": "C:\\Users\\W10\\Documents\\GitHub\\primeiro-projeto-integrador\\projeto\\Artes_da_lineh final\\Artes_da_lineh final.csproj",
         "projectName": "Artes_da_lineh final",
-        "projectPath": "C:\\Users\\Casa\\OneDrive\\Documents\\GitHub\\primeiro-projeto-integrador\\projeto\\Artes_da_lineh final\\Artes_da_lineh final.csproj",
-        "packagesPath": "C:\\Users\\Casa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Casa\\OneDrive\\Documents\\GitHub\\primeiro-projeto-integrador\\projeto\\Artes_da_lineh final\\obj\\",
+        "projectPath": "C:\\Users\\W10\\Documents\\GitHub\\primeiro-projeto-integrador\\projeto\\Artes_da_lineh final\\Artes_da_lineh final.csproj",
+        "packagesPath": "C:\\Users\\W10\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\W10\\Documents\\GitHub\\primeiro-projeto-integrador\\projeto\\Artes_da_lineh final\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Casa\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\W10\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -59,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.404\\RuntimeIdentifierGraph.json"
         }
       }
     }

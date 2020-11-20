@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "YwpeuQjUS/4HUhqulEiYGQ76Ld0N59dEbX5vGDWgLLy7JWOg9G15mshSoZzrw153HLs+usD2sfaNX1u28uHX7g==",
+  "dgSpecHash": "CBMGUkzkSjHN4CimVobSQtjrnszOnY1sFIoHsdC0MN3d1nm4TG2I9x6TU6rizarCOHJsbhCm+hU+jgEpWxM/Aw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Casa\\OneDrive\\Documents\\GitHub\\primeiro-projeto-integrador\\projeto\\Artes_da_lineh final\\Artes_da_lineh final.csproj",
+  "projectFilePath": "C:\\Users\\W10\\Documents\\GitHub\\primeiro-projeto-integrador\\projeto\\Artes_da_lineh final\\Artes_da_lineh final.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Casa\\.nuget\\packages\\mysqlconnector\\0.67.0\\mysqlconnector.0.67.0.nupkg.sha512"
+    "C:\\Users\\W10\\.nuget\\packages\\mysqlconnector\\0.67.0\\mysqlconnector.0.67.0.nupkg.sha512"
   ],
   "logs": []
 }
